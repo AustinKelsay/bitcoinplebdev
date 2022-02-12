@@ -6,7 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
+    "embla-carousel-autoplay": "^6.2.0",
+    "embla-carousel-react": "^6.2.0",
+    "next": "^12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-slideshow-image": "^3.6.0",
