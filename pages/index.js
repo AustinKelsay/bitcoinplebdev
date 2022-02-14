@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay'
 import { SocialIcon } from 'react-social-icons';
@@ -46,16 +47,10 @@ const projects = [
 
 
 export default function Home() {
-  const options = { delay: 2000 } // Options
+  const options = { delay: 3000 } // Options
   const autoplayRoot = (emblaRoot) => emblaRoot.parentElement // Root node
   const autoplay = Autoplay(options, autoplayRoot)
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [autoplay])
-  const scrollPrev = useCallback(() => {
-      if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
-  const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
   return (
     <div className="container">
       <Head>
@@ -97,18 +92,19 @@ export default function Home() {
           </div>
         </div>
         <div className="embla" ref={emblaRef}>
-                    <div className='embla__container'>
-                    {projects.map((project, index) => {
-                        return(
-                            <div key={index} className='embla-project-container'>
-                                <img src={project.src} className="embla__slide"/>
-                                <h4 className="project-title">{project.header}</h4>
-                            </div>
-                        )
-                    })
-                }
-                </div>
-              </div>
+            <div className='embla__container'>
+                {projects.map((project, index) => {
+                    return(
+                        <div key={index} className='embla-project-container'>
+                            <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
+                            <h4 className="project-title">{project.header}</h4>
+                            <p className="project-caption">{project.caption}</p>
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
       </main>
 
       <footer>
@@ -142,16 +138,20 @@ export default function Home() {
           align-items: center;
         }
 
+        span {
+          text-align: center;
+        }
+
         a {
           color: inherit;
           text-decoration: none;
         }
 
         .title {
-          margin-top: 3%;
+          margin-top: 2%;
           line-height: 1.15;
           font-size: 4rem;
-          margin-bottom: 2%;
+          margin-bottom: 1%;
         }
 
         .title,
@@ -181,6 +181,7 @@ export default function Home() {
           transition: color 0.15s 0.0833333333s;
           position: relative;
         }
+
         .draw-border::before, .draw-border::after {
           border: 0 solid transparent;
           box-sizing: border-box;
@@ -192,38 +193,47 @@ export default function Home() {
           bottom: 0;
           right: 0;
         }
+
         .draw-border::before {
           border-bottom-width: 4px;
           border-left-width: 4px;
         }
+
         .draw-border::after {
           border-top-width: 4px;
           border-right-width: 4px;
         }
+
         .draw-border:hover {
           color: #FF9900;
         }
+
         .draw-border:hover::before, .draw-border:hover::after {
           border-color: #FF9900;
           transition: border-color 0s, width 0.25s, height 0.25s;
           width: 100%;
           height: 100%;
         }
+
         .draw-border:hover::before {
           transition-delay: 0s, 0s, 0.25s;
         }
+
         .draw-border:hover::after {
           transition-delay: 0s, 0.25s, 0s;
         }
+
         .btn {
           background: none;
           border: none;
           cursor: pointer;
           line-height: 1.5;
-          font: 700 1.2rem 'Open Sans', sans-serif;
           padding: 0.5em 1.5em;
           letter-spacing: 0.05rem;
+          color: black;
+          font-size: 1.3rem;
         }
+
         .btn:focus {
           box-shadow: inset 0 0 0 4px #E0FFFF;
           border: 1px solid #2F4F4F
@@ -235,16 +245,21 @@ export default function Home() {
           margin: 0;
           color: black;
         }
+
         .embla {
           margin: 0 auto;
-          margin-top: 5%;
+          margin-top: 2%;
           padding-bottom: 2%;
           overflow: hidden;
           width: 100%;
+          border-radius: 10px;
       }
+
       .embla__container {
           display: flex;
+          border-radius: 10px;
       }
+
       .embla-project-container {
           margin: 0 auto;
           position: relative;
@@ -252,22 +267,39 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           width: 90%;
+          border-radius: 25px;
+          padding-bottom: 2%;
       }
+
+      .embla__slide:hover {
+        box-shadow:
+        0 0 5px 3px #FF9900,
+        0 0 5px 3px #fff;
+          transition: box-shadow 0.5s;
+          cursor: pointer;
+      }
+
       .project-title {
           margin: 0 auto;
           margin-top: 1%;
           text-align: center;
+          opacity: 0.8;
       }
+
       .project-caption {
           margin: 0 auto;
           text-align: center;
+          opacity: 0.8;
+          font-family: Inconsolata, monospace;
       }
+
       .embla__slide {
           width: 99%;
           margin: 1% auto;
           height: auto;
           border-radius: 10px;
       }
+
       .embra-button-container {
           width: 60%;
           margin: 0 auto;
@@ -275,6 +307,7 @@ export default function Home() {
           display: flex;
           justify-content: space-around;
       }
+
       .embla__prev,
       .embla__next {
           margin: 1% auto;
@@ -287,11 +320,13 @@ export default function Home() {
           letter-spacing: 0.05rem;
           border: 2px solid black;
       }
+
       .embla__prev:focus,
       .embla__next:focus {
           box-shadow: inset 0 0 0 4px #E0FFFF;
           border: 1px solid #2F4F4F
         }
+
       .embla__prev:hover,
       .embla__next:hover {
           border: 2px solid #ccc;
@@ -313,16 +348,24 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
-            transition: all ease-in 2s;
+            transition: all ease-in 20s;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background: linear-gradient(-30deg, #df590bcc, #c43232c5, #2aafe0c7, #473b88c5) no-repeat center center fixed;
+            background: linear-gradient(-30deg, #df590bcc, #c43232c5, #2aafe0c7, #473b88c5);
             background-size: 300% 300%;
-            animation-name: background;
-            animation-duration: 300s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease;
+            animation: gradient 60s ease infinite;
+        }
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
 
         * {

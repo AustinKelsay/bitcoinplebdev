@@ -127,10 +127,12 @@ export default function Projects() {
                     margin: 0 auto;
                     overflow: hidden;
                     width: 100%;
+                    border-radius: 10px;
                 }
                 .embla__container {
                     display: flex;
                     flex-direction: row;
+                    border-radius: 10px;
                 }
                 .embla-project-container {
                     margin: 0 auto;
@@ -139,6 +141,7 @@ export default function Projects() {
                     display: flex;
                     flex-direction: column;
                     width: 90%;
+                    border-radius: 10px;
                 }
                 .project-title {
                     margin: 0 auto;
@@ -191,16 +194,24 @@ export default function Projects() {
                 font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
                     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
                     sans-serif;
-                    transition: all ease-in 2s;
+                    transition: all ease-in 20s;
                     -webkit-background-size: cover;
                     -moz-background-size: cover;
                     -o-background-size: cover;
-                    background: linear-gradient(-30deg, #df590bcc, #c43232c5, #2aafe0c7, #473b88c5) no-repeat center center fixed;
+                    background: linear-gradient(-30deg, #df590bcc, #c43232c5, #2aafe0c7, #473b88c5);
                     background-size: 300% 300%;
-                    animation-name: background;
-                    animation-duration: 300s;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: ease;
+                    animation: gradient 60s ease infinite;
+                }
+                @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
                 }
 
                 * {
