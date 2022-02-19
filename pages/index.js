@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Layout from '../components/layout'
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay'
 import { SocialIcon } from 'react-social-icons';
@@ -59,58 +58,23 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">
-          plebdev
-        </h1>
-        <div className='column-container'>
-          <div className='column'>
-            <Link href='/about'>
-              <button className='btn draw-border'>
-                <p className='btn-text'>
-                  About
-                </p>
-              </button>
-            </Link>
-          </div>
-          <div className='column'>
-            <Link href='projects'>
-              <button className='btn draw-border'>
-                <p className='btn-text'>
-                  Projects
-                </p>
-              </button>
-            </Link>
-          </div>
-          <div className='column'>
-            <Link href='/blog'>
-              <button className='btn draw-border'>
-                <p className='btn-text'>
-                  Blog
-                </p>
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="embla" ref={emblaRef}>
-            <div className='embla__container'>
-                {projects.map((project, index) => {
+        <Layout>
+          <div className="embla" ref={emblaRef}>
+              <div className='embla__container'>
+                  {projects.map((project, index) => {
                     return(
-                        <div key={index} className='embla-project-container'>
-                            <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
-                            <h4 className="project-title">{project.header}</h4>
-                            <p className="project-caption">{project.caption}</p>
-                        </div>
-                    )
-                })
-            }
-            </div>
-        </div>
+                      <div key={index} className='embla-project-container'>
+                              <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
+                              <h4 className="project-title">{project.header}</h4>
+                              <p className="project-caption">{project.caption}</p>
+                          </div>
+                      )
+                    })
+                  }
+              </div>
+          </div>
+        </Layout>
       </main>
-
-      <footer>
-        <SocialIcon url="https://github.com/austinkelsay" />
-        <SocialIcon url="https://twitter.com/ASeries_ofTubes" />
-      </footer>
 
       <style jsx>{`
         .container {
@@ -127,15 +91,6 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           width: 50%;
-        }
-
-        footer {
-          width: 10%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
         }
 
         span {

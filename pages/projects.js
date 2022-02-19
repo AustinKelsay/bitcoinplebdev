@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import React, {useEffect, useCallback} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {SocialIcon} from 'react-social-icons'
@@ -54,13 +55,9 @@ export default function Projects() {
     }, [emblaApi])
     return(
         <div className='container'>
-            <Head>
-                <title>bitcoinplebdev</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
             <main>
                 <h1 className='title'>projects</h1>
+                <Link href="/"><span>Home</span></Link>
                 <div className="embla" ref={emblaRef}>
                     <div className='embla__container'>
                     {projects.map((project, index) => {
@@ -84,10 +81,6 @@ export default function Projects() {
                     </div>
                 </div>
             </main>
-            <footer>
-                <SocialIcon url="https://github.com/austinkelsay" />
-                <SocialIcon url="https://twitter.com/ASeries_ofTubes" />
-            </footer>
 
             <style jsx>{`
                 .container {
@@ -104,6 +97,20 @@ export default function Projects() {
                     flex-direction: column;
                     width: 60%;
                   }
+                  span {
+                      width: 6%;
+                      margin: 0 auto;
+                      margin-top: 0;
+                      text-align: center;
+                      margin-top: 1%;
+                      margin-bottom: 1rem;
+                      border-bottom: 2px solid transparent;
+                  }
+                  span:hover {
+                      border-bottom: 2px solid #FF9900;
+                      cursor: pointer;
+                      transition: all 0.4s ease-in-out;
+                  }
           
                   footer {
                     width: 10%;
@@ -115,10 +122,10 @@ export default function Projects() {
                   }
                   .title {
                     text-align: center;
-                    margin-top: 3%;
+                    margin-top: 2%;
                     line-height: 1.15;
                     font-size: 4rem;
-                    margin-bottom: 2%;
+                    margin-bottom: 0%;
                   }
                   h3 {
                     text-align: center;
