@@ -50,6 +50,7 @@ export default function Header({ Component, pageProps }) {
                 flex-direction: row;
                 justify-content: space-between;
                 margin: 1% auto;
+                margin-bottom: 0;
               }
       
               .column {
@@ -123,7 +124,7 @@ export default function Header({ Component, pageProps }) {
                 border: 1px solid #2F4F4F
               }
               
-              .btn p {
+              .btn-text {
                 font-family: 'Roboto Mono', monospace;
                 font-size: 0.9rem;
                 margin: 0;

@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, {useEffect, useCallback} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import {SocialIcon} from 'react-social-icons'
 import Layout from '../components/layout'
 import gameOfLife from "../images/gameOfLife.jpg"
 import fbExplorer from "../images/fbexplorer.jpg"
@@ -63,22 +62,34 @@ export default function Projects() {
                         {projects.map((project, index) => {
                             return(
                                 <div key={index} className='embla-project-container'>
-                                    <img src={project.src} className="embla__slide"/>
+                                    <div className='slide-container'>
+                                        <button className="arrow left" onClick={scrollPrev} />
+                                        <img src={project.src} className="embla__slide"/>
+                                        <button className="arrow right" onClick={scrollNext} />
+                                    </div>
                                     <h4 className="project-title">{project.header}</h4>
                                     <p>{project.caption}</p>
+                                    <div className='project-button-container'>
+                                        <a href={project.link} target='_blank'>
+                                            <button className='project-button'>
+                                                <p className='btn-text'>
+                                                    deployment link
+                                                </p>
+                                            </button>
+                                        </a>
+                                        <a href={project.github} target="_blank">
+                                            <button className="project-button">
+                                                <p className='btn-text'>
+                                                    github link
+                                                </p>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
                             )
                         })
                     }
                     </div>
-                        <div className='embra-button-container'>
-                            <button className="embla__prev" onClick={scrollPrev}>
-                                Prev
-                            </button>
-                            <button className="embla__next" onClick={scrollNext}>
-                                Next
-                            </button>
-                        </div>
                     </div>
                 </Layout>
             </main>
@@ -97,6 +108,10 @@ export default function Projects() {
                     display: flex;
                     flex-direction: column;
                     width: 60%;
+                  }
+                  a {
+                    color: inherit;
+                    text-decoration: none;
                   }
                   span {
                       width: 6%;
@@ -148,7 +163,7 @@ export default function Projects() {
                     flex: 0 0 100%;
                     display: flex;
                     flex-direction: column;
-                    width: 90%;
+                    width: 100%;
                     border-radius: 10px;
                 }
                 .project-title {
@@ -160,11 +175,71 @@ export default function Projects() {
                     margin: 0 auto;
                     text-align: center;
                 }
+                .slide-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    width: 80%;
+                }
                 .embla__slide {
-                    width: 99%;
+                    width: 100%;
                     margin: 1% auto;
                     height: auto;
                     border-radius: 10px;
+                }
+                .arrow {
+                    border: solid black;
+                    border-width: 0 10px 10px 0;
+                    display: inline-block;
+                    padding: 8px;
+                    background:none;
+                }
+                .arrow:hover {
+                    border: solid #FF9900;
+                    border-width: 0 10px 10px 0;
+                    display: inline-block;
+                    padding: 8px;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                }
+                .right {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    margin-left: 2%;
+                }
+                  
+                .left {
+                    transform: rotate(135deg);
+                    -webkit-transform: rotate(135deg);
+                    margin-right: 2%;
+                }
+                .project-button-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    margin-bottom: 2%;
+                }
+                .project-button {
+                    background: none;
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: black
+                    padding: 2%;
+                    border: 2px solid black;
+                }
+                .project-button:hover {
+                    background: #FF9900;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                .btn-text {
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: 1rem;
+                    margin: 0;
+                    color: black;
                 }
                 .embra-button-container {
                     width: 60%;
