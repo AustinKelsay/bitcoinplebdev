@@ -14,7 +14,8 @@ export default function Footer({ Component, pageProps }) {
         }
 
         footer {
-            width: 10%;
+            width: 20%;
+            margin: 0 auto;
             height: 100px;
             border-top: 1px solid #eaeaea;
             display: flex;

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, {useEffect, useCallback} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {SocialIcon} from 'react-social-icons'
+import Layout from '../components/layout'
 import gameOfLife from "../images/gameOfLife.jpg"
 import fbExplorer from "../images/fbexplorer.jpg"
 import Reclaim from "../images/reclaimWide.png"
@@ -56,30 +57,30 @@ export default function Projects() {
     return(
         <div className='container'>
             <main>
-                <h1 className='title'>projects</h1>
-                <Link href="/"><span>Home</span></Link>
-                <div className="embla" ref={emblaRef}>
-                    <div className='embla__container'>
-                    {projects.map((project, index) => {
-                        return(
-                            <div key={index} className='embla-project-container'>
-                                <img src={project.src} className="embla__slide"/>
-                                <h4 className="project-title">{project.header}</h4>
-                                <p>{project.caption}</p>
-                            </div>
-                        )
-                    })
-                }
-                </div>
-                    <div className='embra-button-container'>
-                        <button className="embla__prev" onClick={scrollPrev}>
-                            Prev
-                        </button>
-                        <button className="embla__next" onClick={scrollNext}>
-                            Next
-                        </button>
+                <Layout>
+                    <div className="embla" ref={emblaRef}>
+                        <div className='embla__container'>
+                        {projects.map((project, index) => {
+                            return(
+                                <div key={index} className='embla-project-container'>
+                                    <img src={project.src} className="embla__slide"/>
+                                    <h4 className="project-title">{project.header}</h4>
+                                    <p>{project.caption}</p>
+                                </div>
+                            )
+                        })
+                    }
                     </div>
-                </div>
+                        <div className='embra-button-container'>
+                            <button className="embla__prev" onClick={scrollPrev}>
+                                Prev
+                            </button>
+                            <button className="embla__next" onClick={scrollNext}>
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </Layout>
             </main>
 
             <style jsx>{`
