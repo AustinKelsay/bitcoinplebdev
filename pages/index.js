@@ -91,7 +91,6 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-          width: 52%;
         }
 
         span {
@@ -123,9 +122,8 @@ export default function Home() {
           flex: 0 0 100%;
           display: flex;
           flex-direction: column;
-          width: 90%;
+          width: 40%;
           border-radius: 25px;
-          padding-bottom: 2%;
       }
 
       .embla__slide:hover {
@@ -144,6 +142,7 @@ export default function Home() {
       }
 
       .project-caption {
+        width: 60%;
           margin: 0 auto;
           text-align: center;
           opacity: 0.8;
@@ -151,7 +150,7 @@ export default function Home() {
       }
 
       .embla__slide {
-          width: 99%;
+          width: 50%;
           margin: 1% auto;
           height: auto;
           border-radius: 10px;
@@ -210,7 +209,7 @@ export default function Home() {
             -moz-background-size: cover;
             -o-background-size: cover;
             background: linear-gradient(-30deg, #df590bcc, #c43232c5, #2aafe0c7, #473b88c5);
-            background-size: 300% 300%;
+            background-size: 400% 400%;
             animation: gradient 60s ease infinite;
         }
         @keyframes gradient {

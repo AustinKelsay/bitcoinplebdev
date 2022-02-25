@@ -58,7 +58,7 @@ export default function Header() {
             <style jsx>{`
             .title {
                 font-family: Inconsolata, monospace;
-                margin-top: 2%;
+                margin-top: 0%;
                 line-height: 1.15;
                 font-size: 4rem;
                 margin-bottom: 1%;
@@ -66,16 +66,16 @@ export default function Header() {
             }
         
                 .column-container {
-                    width: 100%;
+                    width: 70%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     margin: 1% auto;
-                    margin-bottom: 0;
+                    margin-bottom: 1%;
                 }
         
                 .column {
-                    margin: 2% auto;
+                    margin: 0% auto;
                     width: 60%;
                     display: flex;
                     flex-direction: column;

@@ -103,11 +103,11 @@ export default function Projects() {
                     justify-content: center;
                     align-items: center;
                 }          
-                  main {
+                main {
                     flex: 1;
                     display: flex;
                     flex-direction: column;
-                    width: 60%;
+                    justify-content: space-evenly;
                   }
                   a {
                     color: inherit;
@@ -172,6 +172,8 @@ export default function Projects() {
                     text-align: center;
                 }
                 .project-caption {
+                    width: 70%;
+                    margin: 1% auto;
                     text-align: center;
                 }
                 .slide-container {
@@ -180,7 +182,7 @@ export default function Projects() {
                     justify-content: center;
                     align-items: center;
                     margin: 0 auto;
-                    width: 80%;
+                    width: 50%;
                 }
                 .embla__slide {
                     width: 100%;
