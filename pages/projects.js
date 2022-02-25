@@ -68,7 +68,7 @@ export default function Projects() {
                                         <button className="arrow right" onClick={scrollNext} />
                                     </div>
                                     <h4 className="project-title">{project.header}</h4>
-                                    <p>{project.caption}</p>
+                                    <p className='project-caption'>{project.caption}</p>
                                     <div className='project-button-container'>
                                         <a href={project.link} target='_blank'>
                                             <button className='project-button'>
@@ -172,7 +172,6 @@ export default function Projects() {
                     text-align: center;
                 }
                 .project-caption {
-                    margin: 0 auto;
                     text-align: center;
                 }
                 .slide-container {
@@ -224,11 +223,12 @@ export default function Projects() {
                 }
                 .project-button {
                     background: none;
-                    text-decoration: none;
+                    border: none;
                     cursor: pointer;
-                    color: black
-                    padding: 2%;
-                    border: 2px solid black;
+                    line-height: 1.5;
+                    padding: 0.5em 1.5em;
+                    color: black;
+                    border: 4px solid black;
                 }
                 .project-button:hover {
                     background: #FF9900;
@@ -236,8 +236,8 @@ export default function Projects() {
                 }
 
                 .btn-text {
-                    font-family: 'Roboto Mono', monospace;
-                    font-size: 1rem;
+                    font-family: Inconsolata, monospace;
+                    font-size:1rem;
                     margin: 0;
                     color: black;
                 }
