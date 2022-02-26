@@ -1,13 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head'
 import Layout from '../components/layout'
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay'
-import { SocialIcon } from 'react-social-icons';
-import gameOfLife from "../images/gameOfLife.jpg"
-import fbExplorer from "../images/fbexplorer.jpg"
-import Reclaim from "../images/reclaimWide.png"
-import KnowledgeBot from "../images/bitcoinKnowledgeBot.png"
 
 
 export default function About() {
@@ -22,7 +15,7 @@ export default function About() {
         <Layout>
             <div className='text-container'>
                 <h4>My mission:</h4>
-                <p>To participate in software that is meaningful for individuals. To be surounded by colleagues and teams building impactful software.</p>
+                <p>To participate in building software around the Bitcoin ecosystem. To focus on impacting and empowering individuals, To be surounded by colleagues and teams building impactful software.</p>
 
                 <h4>My history:</h4>
                 <p>I began my journey self taught after my interest in Bitcoin grew to a passion along with my understanding of money and software. Quickly my pursuit outgrew my means, and I got serious enough about my interest 2 years ago to enter Lambda School (now Bloomtech) as a Full Stack Web student. While continuing my studies, I worked as a Team Lead for 1 year helping other students learn to code. After graduation, in 2021, I accepted a position at Forethought as an AI Solutions Engineer.</p>
@@ -33,18 +26,16 @@ export default function About() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          flex: 1;
+          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
+        }
+
+        main {
+          height: 100%;
+          margin: 1% auto;
+          width: 80%;
         }
 
         span {
@@ -55,13 +46,22 @@ export default function About() {
           color: inherit;
           text-decoration: none;
         }
+
         .text-container {
-            width: 80%;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            border-radius: 10px;
+        }
+        h4 {
+            text-align: center;
+            font-family: Inconsolata, monospace;
+            padding-top: 5%;
+        }
+        p {
+            text-align: center;
+            font-family: Inconsolata, monospace;
+            padding-bottom: 10%;
         }
       `}</style>
 

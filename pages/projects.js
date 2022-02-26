@@ -108,6 +108,7 @@ export default function Projects() {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
+                    margin-top: 2%;
                   }
                   a {
                     color: inherit;
@@ -126,22 +127,6 @@ export default function Projects() {
                       border-bottom: 2px solid #FF9900;
                       cursor: pointer;
                       transition: all 0.4s ease-in-out;
-                  }
-          
-                  footer {
-                    width: 10%;
-                    height: 100px;
-                    border-top: 1px solid #eaeaea;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                  }
-                  .title {
-                    text-align: center;
-                    margin-top: 2%;
-                    line-height: 1.15;
-                    font-size: 4rem;
-                    margin-bottom: 0%;
                   }
                   h3 {
                     text-align: center;
@@ -221,7 +206,6 @@ export default function Projects() {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
-                    margin-bottom: 2%;
                 }
                 .project-button {
                     background: none;

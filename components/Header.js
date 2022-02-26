@@ -57,12 +57,17 @@ export default function Header() {
         }
             <style jsx>{`
             .title {
+                width: 100%;
                 font-family: Inconsolata, monospace;
                 margin-top: 0%;
                 line-height: 1.15;
                 font-size: 4rem;
                 margin-bottom: 1%;
                 text-align: center;
+                position: absolute;
+                right: 0;
+                top: 0;
+                overflow: hidden;
             }
         
                 .column-container {
@@ -71,7 +76,10 @@ export default function Header() {
                     flex-direction: row;
                     justify-content: space-between;
                     margin: 1% auto;
-                    margin-bottom: 1%;
+                    position: absolute;
+                    right: 15%;
+                    top: 8%;
+                    overflow: hidden;
                 }
         
                 .column {
