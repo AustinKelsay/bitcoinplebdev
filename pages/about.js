@@ -14,11 +14,58 @@ export default function About() {
       <main>
         <Layout>
             <div className='text-container'>
-                <h4>My mission:</h4>
-                <p>To participate in building software around the Bitcoin ecosystem. To focus on impacting and empowering individuals, To be surounded by colleagues and teams building impactful software.</p>
+                <h3>My mission:</h3>
+                <p>To participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, to be surounded by colleagues and teams building impactful software.</p>
 
-                <h4>My history:</h4>
+                <h3>My history:</h3>
                 <p>I began my journey self taught after my interest in Bitcoin grew to a passion along with my understanding of money and software. Quickly my pursuit outgrew my means, and I got serious enough about my interest 2 years ago to enter Lambda School (now Bloomtech) as a Full Stack Web student. While continuing my studies, I worked as a Team Lead for 1 year helping other students learn to code. After graduation, in 2021, I accepted a position at Forethought as an AI Solutions Engineer.</p>
+            </div>
+            <div className="skills">
+                <h3>My skills:</h3>
+                <div className="skill-columns">
+                    <div className="skill-column">
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" />
+                    </div>
+                    <div className='skill-column'>
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                    </div>
+                    <div className="skill-column">
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg" />
+                    </div>
+                    <div className="skill-column">
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-plain.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" />
+                    </div>
+                    <div className="skill-column">
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
+                        <span>(Jest)</span>
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                        <span>(React Testing Library)</span>
+                        <img className='skill-icon' src="https://avatars2.githubusercontent.com/u/8908513?s=400&v=4" />
+                        <span>(Cypress)</span>
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
+                        <span>(Python UnitTest)</span>                        
+                    </div>
+                </div>
             </div>
         </Layout>
       </main>
@@ -40,6 +87,7 @@ export default function About() {
 
         span {
           text-align: center;
+          font-size: 0.8rem;
         }
 
         a {
@@ -53,15 +101,31 @@ export default function About() {
             width: 100%;
             border-radius: 10px;
         }
-        h4 {
+        h3 {
             text-align: center;
             font-family: Inconsolata, monospace;
-            padding-top: 5%;
         }
         p {
             text-align: center;
             font-family: Inconsolata, monospace;
-            padding-bottom: 10%;
+            font-size: 1rem;
+        }
+        .skill-columns {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .skill-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .skill-icon {
+            margin: 1% auto;
+            margin-top: 20%;
+            width: 55px;
+            height: 55px;
         }
       `}</style>
 
