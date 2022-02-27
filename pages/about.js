@@ -18,7 +18,7 @@ export default function About() {
                 <p>To participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, to be surounded by colleagues and teams building impactful software.</p>
 
                 <h3>My history:</h3>
-                <p>I began my journey self taught after my interest in Bitcoin grew to a passion along with my understanding of money and software. Quickly my pursuit outgrew my means, and I got serious enough about my interest 2 years ago to enter Lambda School (now Bloomtech) as a Full Stack Web student. While continuing my studies, I worked as a Team Lead for 1 year helping other students learn to code. After graduation, in 2021, I accepted a position at Forethought as an AI Solutions Engineer.</p>
+                <p>I began my journey self taught after my interest in Bitcoin and software grew to a passion. Quickly my pursuit outgrew my means, and I got serious enough to enter Lambda School (now Bloomtech) as a Full Stack Web student. While continuing my studies, I worked as a Team Lead for 1 year helping other students learn to code. After graduation, in 2021, I accepted a position at Forethought as an AI Solutions Engineer. I have continued to build my skills and am ready to focus fully on the Bitcoin ecosystem</p>
             </div>
             <div className="skills">
                 <h3>My skills:</h3>
@@ -63,7 +63,7 @@ export default function About() {
                         <img className='skill-icon' src="https://avatars2.githubusercontent.com/u/8908513?s=400&v=4" />
                         <span>(Cypress)</span>
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
-                        <span>(Python UnitTest)</span>                        
+                        <span>(Python UnitTest)</span>                
                     </div>
                 </div>
             </div>
@@ -111,11 +111,14 @@ export default function About() {
             font-size: 1rem;
         }
         .skill-columns {
-            width: 70%;
             margin: 0 auto;
+            padding: 1%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: rgba(255,153,0,0.3);
         }
         .skill-column {
             display: flex;
@@ -124,8 +127,8 @@ export default function About() {
         .skill-icon {
             margin: 1% auto;
             margin-top: 20%;
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
         }
       `}</style>
 
