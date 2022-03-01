@@ -30,6 +30,7 @@ export default function About() {
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" />
+                        <p className='skill-category-text'>frontend</p>
                     </div>
                     <div className='skill-column'>
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
@@ -38,6 +39,7 @@ export default function About() {
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                        <p className='skill-category-text'>UI/UX</p>
                     </div>
                     <div className="skill-column">
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
@@ -46,6 +48,20 @@ export default function About() {
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg" />
+                        <p className='skill-category-text'>backend</p>   
+                    </div>
+                    <div className="skill-column">
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
+                        <span>(Jest)</span>
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                        <span>(RTL)</span>
+                        <img className='skill-icon' src="https://avatars2.githubusercontent.com/u/8908513?s=400&v=4" />
+                        <span>(Cypress)</span>
+                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
+                        <span>(Python UnitTest)</span>
+                        <img className='skill-icon' src="https://cdn.iconscout.com/icon/premium/png-512-thumb/selenium-2-570545.png" />
+                        <span>(Selenium)</span>
+                        <p className='skill-category-text'>testing</p>          
                     </div>
                     <div className="skill-column">
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
@@ -54,16 +70,7 @@ export default function About() {
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" />
-                    </div>
-                    <div className="skill-column">
-                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
-                        <span>(Jest)</span>
-                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                        <span>(React Testing Library)</span>
-                        <img className='skill-icon' src="https://avatars2.githubusercontent.com/u/8908513?s=400&v=4" />
-                        <span>(Cypress)</span>
-                        <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
-                        <span>(Python UnitTest)</span>                
+                        <p className='skill-category-text'>miscellaneous</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +94,7 @@ export default function About() {
 
         span {
           text-align: center;
-          font-size: 0.8rem;
+          font-size: 0.7rem;
         }
 
         a {
@@ -100,10 +107,12 @@ export default function About() {
             overflow: hidden;
             width: 100%;
             border-radius: 10px;
+            margin-top: 5%;
         }
         h3 {
             text-align: center;
             font-family: Inconsolata, monospace;
+            margin-top: 0;
         }
         p {
             text-align: center;
@@ -112,7 +121,7 @@ export default function About() {
         }
         .skill-columns {
             margin: 0 auto;
-            padding: 1%;
+            padding: 0.5%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -123,12 +132,21 @@ export default function About() {
         .skill-column {
             display: flex;
             flex-direction: column;
+            width: 8%;
+            justify-content: space-around;
+            align-items: center;
+            align-self: flex-end;
         }
         .skill-icon {
-            margin: 1% auto;
-            margin-top: 20%;
-            width: 50px;
-            height: 50px;
+            margin: 0 auto;
+            margin-top: 10%;
+            width: 55px;
+            height: 55px;
+        }
+        .skill-category-text {
+            border-top: 1px solid #FF9900;
+            font-size: 0.8rem;
+            margin-bottom: 0;
         }
       `}</style>
 
