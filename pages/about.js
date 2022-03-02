@@ -14,14 +14,17 @@ export default function About() {
       <main>
         <Layout>
             <div className='text-container'>
-                <h3>My mission:</h3>
+              <div className="text-block">
+                <h3>MY MISSION</h3>
                 <p>To participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, to be surounded by colleagues and teams building impactful software.</p>
-
-                <h3>My history:</h3>
+              </div>
+              <div className="text-block">
+                <h3>MY HISTORY</h3>
                 <p>I began my journey self taught after my interest in Bitcoin and software grew to a passion. Quickly my pursuit outgrew my means, and I got serious enough to enter Lambda School (now Bloomtech) as a Full Stack Web student. While continuing my studies, I worked as a Team Lead for 1 year helping other students learn to code. After graduation, in 2021, I accepted a position at Forethought as an AI Solutions Engineer. I have continued to build my skills and am ready to focus fully on the Bitcoin ecosystem</p>
+              </div>
             </div>
             <div className="skills">
-                <h3>My skills:</h3>
+                <h3>MY SKILLS</h3>
                 <div className="skill-columns">
                     <div className="skill-column">
                         <img className='skill-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
@@ -108,16 +111,25 @@ export default function About() {
             width: 100%;
             border-radius: 10px;
             margin-top: 5%;
+            display: flex;
+        }
+        .text-block {
+          width: 48%;
+          margin: 1%;
+          padding:1%;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: rgb(255, 255, 255, 0.6);
+          margin-top: 0;
         }
         h3 {
             text-align: center;
-            font-family: Inconsolata, monospace;
             margin-top: 0;
         }
         p {
             text-align: center;
-            font-family: Inconsolata, monospace;
             font-size: 1rem;
+            margin: 0 auto;
         }
         .skill-columns {
             margin: 0 auto;
@@ -127,7 +139,7 @@ export default function About() {
             justify-content: space-evenly;
             border: 2px solid black;
             border-radius: 10px;
-            background-color: rgba(255,153,0,0.3);
+            background-color: rgb(255, 255, 255, 0.6)
         }
         .skill-column {
             display: flex;
