@@ -119,7 +119,7 @@ export default function About() {
           padding:1%;
           border: 2px solid black;
           border-radius: 10px;
-          background-color: rgb(255, 255, 255, 0.6);
+          background-color: rgb(255, 255, 255, 0.5);
           margin-top: 0;
         }
         h3 {
@@ -139,7 +139,7 @@ export default function About() {
             justify-content: space-evenly;
             border: 2px solid black;
             border-radius: 10px;
-            background-color: rgb(255, 255, 255, 0.6)
+            background-color: rgb(255, 255, 255, 0.5)
         }
         .skill-column {
             display: flex;
@@ -158,6 +158,7 @@ export default function About() {
         .skill-category-text {
             border-top: 1px solid #FF9900;
             font-size: 0.8rem;
+            margin-top: 10%;
             margin-bottom: 0;
         }
       `}</style>
