@@ -2,6 +2,7 @@ import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/layout'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 function PostTemplate({ content, data }) {
   // This holds the data between `---` from the .md file
@@ -12,7 +13,12 @@ function PostTemplate({ content, data }) {
       <main>
         <Layout>
           <div className='markdown-container'>
-            <ReactMarkdown className='markdown'>{content}</ReactMarkdown>
+            <InfiniteScroll
+              dataLength={content.length}
+              height={'600px'}
+            >
+              <ReactMarkdown className='markdown'>{content}</ReactMarkdown>
+            </InfiniteScroll>
           </div>
         </Layout>
       </main>
