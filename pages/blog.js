@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Image from 'next/image';
 import Hello from "../images/hello.jpg"
+import Journey from "../images/journey.png"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,15 +15,15 @@ export default function Blog() {
     const [posts, setPosts] = useState([
         {
             title: 'Hello World',
-            date: '2020-01-01',
+            date: '2022-03-07',
             url: "/blog/hello",
             image: Hello.src,
         },
         {
             title: 'Journey to my first Bitcoin FOSS contribution (and tips for the other plebdevs)',
-            date: '2020-01-01',
+            date: '2022-03-07',
             url: "/blog/journey",
-            image: Hello.src,
+            image: Journey.src,
         }
     ])
   return (
@@ -40,7 +41,7 @@ export default function Blog() {
                 <div className='blogs'>
                     {posts.map((post, index) => {
                         return(
-                            <Card style={{margin: "5% auto"}} key={index} sx={{ maxWidth: 345 }}>
+                            <Card style={{margin: "5% auto"}} key={index} sx={{ maxWidth: 300 }}>
                                 <CardActionArea href={post.url}>
                                     <CardMedia
                                         component="img"
@@ -98,7 +99,7 @@ export default function Blog() {
                 color: white;
             }
             .blogs {
-                width: 100%;
+                width: 80%;
                 margin: 1% auto;
                 display: flex;
                 flex-direction: row;

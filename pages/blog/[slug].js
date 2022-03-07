@@ -15,7 +15,7 @@ function PostTemplate({ content, data }) {
           <div className='markdown-container'>
             <InfiniteScroll
               dataLength={content.length}
-              height={'600px'}
+              height={'650px'}
             >
               <ReactMarkdown className='markdown'>{content}</ReactMarkdown>
             </InfiniteScroll>
@@ -47,9 +47,10 @@ function PostTemplate({ content, data }) {
             }
             .markdown-container {
               padding: 1%;
+              margin-top: 3%;
               border: 2px solid black;
               border-radius: 10px;
-              background-color: rgb(255, 255, 255, 0.5);
+              background-color: rgb(255, 255, 255, 0.3);
             }
             .markdown {
               margin: 0 auto;
