@@ -18,14 +18,17 @@ export default function Blog() {
             date: '2022-03-07',
             url: "/blog/hello",
             image: Hello.src,
+            first_paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         },
         {
             title: 'Journey to my first Bitcoin FOSS contribution (and tips for the other plebdevs)',
             date: '2022-03-07',
             url: "/blog/journey",
             image: Journey.src,
+            first_paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         }
     ])
+
   return (
     <div className="container">
       <Head>
@@ -41,11 +44,11 @@ export default function Blog() {
                 <div className='blogs'>
                     {posts.map((post, index) => {
                         return(
-                            <Card style={{margin: "5% auto"}} key={index} sx={{ maxWidth: 300 }}>
+                            <Card style={{margin: "5% auto"}} key={index} sx={{ maxWidth: 450, maxHeight: 500, backgroundColor: "rgb(255, 255, 255, 0.8);" }}>
                                 <CardActionArea href={post.url}>
                                     <CardMedia
                                         component="img"
-                                        width="100"
+                                        width="150"
                                         image={post.image}
                                         />
                                     <CardContent>
@@ -54,6 +57,9 @@ export default function Blog() {
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
                                             {post.date}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary" sx={{ wordWrap: 'break-word' }}>
+                                            {post.first_paragraph}
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>

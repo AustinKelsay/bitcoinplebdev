@@ -64,10 +64,10 @@ export default function Home() {
                   {projects.map((project, index) => {
                     return(
                       <div key={index} className='embla-project-container'>
-                              <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
-                              <h4 className="project-title">{project.header}</h4>
-                              <p className="project-caption">{project.caption}</p>
-                          </div>
+                          <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
+                          <h4 className="project-title">{project.header}</h4>
+                          <p className="project-caption">{project.caption}</p>
+                      </div>
                       )
                     })
                   }
