@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import Link from "next/link"
+import {useRouter} from 'next/router'
 
 export default function Header() {
+    const router = useRouter()
     let url = ""
     if (typeof window !== 'undefined') {
         url = window.location.href.split('/');
@@ -43,7 +45,14 @@ export default function Header() {
                 </div>
             </div>
             :
-            <div className='column-container'>
+            <div className='column-container-alt'>
+                <div className='column'>
+                    <button onClick={() => router.back()} className='btn draw-border'>
+                        <p className='btn-text'>
+                            back
+                        </p>
+                    </button>
+                </div>
                 <div className='column'>
                     <Link href='/'>
                         <button className='btn draw-border'>
@@ -78,6 +87,18 @@ export default function Header() {
                     margin: 1% auto;
                     position: absolute;
                     right: 15%;
+                    top: 8%;
+                    overflow: hidden;
+                }
+
+                .column-container-alt {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 1% auto;
+                    position: absolute;
+                    right: 35%;
                     top: 8%;
                     overflow: hidden;
                 }
