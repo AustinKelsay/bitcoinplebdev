@@ -39,7 +39,7 @@ export default function Blog() {
         <Layout>
                 <InfiniteScroll
                     dataLength={posts.length}
-                    height={'600px'}
+                    height={'65vh'}
                 >
                 <div className='blogs'>
                     {posts.map((post, index) => {
@@ -111,6 +111,12 @@ export default function Blog() {
                 flex-direction: row;
                 justify-content: space-evenly;
                 flex-wrap: wrap;
+            }
+            @media (max-width: 375px) {
+                .blogs {
+                  width: 100%;
+                  margin-top: 5%;
+                }
             }
         `}</style>
 

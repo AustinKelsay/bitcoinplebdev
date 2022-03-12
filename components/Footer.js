@@ -26,6 +26,13 @@ export default function Footer({ Component, pageProps }) {
             height: 80px;
             overflow: hidden;
         }
+        @media (max-width: 375px) {
+            footer {
+                width: 70%;
+                left: 15%;
+                height: 60px;
+            }
+        }
         `}</style>
     </div>
   )

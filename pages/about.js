@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import Head from 'next/head'
 import Layout from '../components/layout'
 
@@ -13,6 +14,10 @@ export default function About() {
 
       <main>
         <Layout>
+          <InfiniteScroll
+            dataLength={3}
+            height={'80vh'}
+            >
             <div className='text-container'>
               <div className="text-block">
                 <h3>MY MISSION</h3>
@@ -77,6 +82,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            </InfiniteScroll>
         </Layout>
       </main>
 
@@ -160,6 +166,34 @@ export default function About() {
             font-size: 0.8rem;
             margin-top: 10%;
             margin-bottom: 0;
+        }
+        @media (max-width: 375px) {
+            main {
+                width: 90%;
+            }
+            .text-container {
+                margin-top: 20%;
+                flex-direction: column;
+                width: 100%;
+            }
+            .text-block {
+                width: 99%;
+            }
+            .skill-columns {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .skill-column {
+                width: 50%;
+            }
+            h3 {
+              margin-top: 5%;
+              margin-bottom: 1%;
+            }
+            .skill-category-text {
+              font-size: 1rem;
+              border-top: 2px solid #FF9900;
+            }
         }
       `}</style>
 

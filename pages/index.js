@@ -194,6 +194,22 @@ export default function Home() {
             flex-direction: column;
           }
         }
+        @media (max-width: 375px) {
+            .embla-project-container {
+                width: 100%;
+            }
+            .embla__slide {
+                width: 90%;
+            }
+            .project-title {
+                width: 100%;
+                margin-top: 5%;
+            }
+            .project-caption {
+                width: 100%;
+                margin-top: 5%;
+            }
+        }
       `}</style>
 
       <style jsx global>{`

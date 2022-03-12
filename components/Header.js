@@ -180,6 +180,26 @@ export default function Header() {
                     margin: 0;
                     color: black;
                 }
+                @media (max-width: 375px) {
+                    .title {
+                        font-size: 3rem;
+                    }
+                    .column-container {
+                        width: 100%;
+                        top: 9%;
+                        left: 0;
+                        right: 0;
+                    }
+                    .column-container-alt {
+                        width: 80%;
+                        top: 9%;
+                        left: 0;
+                        right: 0;
+                    }
+                    .btn-text {
+                        font-size: 0.8rem;
+                    }
+                }
             `}</style>
         </div>
     )

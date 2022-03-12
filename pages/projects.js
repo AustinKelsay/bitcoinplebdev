@@ -254,6 +254,34 @@ export default function Projects() {
                 .embla__next:hover {
                     border: 2px solid #ccc;
                 }
+                @media (max-width: 375px) {
+                    .slide-container {
+                        width: 85%;
+                    }
+                    .arrow {
+                        border-width: 0 6px 6px 0;
+                    }
+                    .arrow:hover {
+                        border: solid #FF9900;
+                        border-width: 0 6px 6px 0;
+                        display: inline-block;
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    .right {
+                        margin-left: 0;
+                    }
+                    .left {
+                        margin-right: 0;
+                    }
+                    .project-title {
+                        margin-top: 5%;
+                    }
+                    .project-caption {
+                        width: 100%;
+                        margin-bottom: 10%;
+                    }
+                }
             `}</style>
             <style jsx global>{`
                 html,
