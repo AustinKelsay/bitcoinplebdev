@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import React, {useEffect, useCallback} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Layout from '../components/layout'

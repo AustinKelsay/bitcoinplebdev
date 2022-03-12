@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay'
-import { SocialIcon } from 'react-social-icons';
 import gameOfLife from "../images/gameOfLife.jpg"
 import fbExplorer from "../images/fbexplorer.jpg"
 import Reclaim from "../images/reclaimWide.png"
