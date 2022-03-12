@@ -1,6 +1,6 @@
 import React, {useEffect, useCallback} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import gameOfLife from "../images/gameOfLife.jpg"
 import fbExplorer from "../images/fbexplorer.jpg"
 import Reclaim from "../images/reclaimWide.png"

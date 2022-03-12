@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Hello from "../images/hello.jpg"
 import Journey from "../images/journey.png"
 import Card from '@mui/material/Card';

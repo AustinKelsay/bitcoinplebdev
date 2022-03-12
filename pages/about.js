@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 
 export default function About() {
