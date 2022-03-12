@@ -78,7 +78,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -200,7 +200,7 @@ export default function Home() {
         html,
         body {
           padding: 0;
-          margin: 0 auto;
+          margin: auto;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
