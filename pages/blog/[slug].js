@@ -14,7 +14,7 @@ function PostTemplate({ content, data }) {
           <div className='markdown-container'>
             <InfiniteScroll
               dataLength={content.length}
-              height={'650px'}
+              height={'70vh'}
             >
               <ReactMarkdown className='markdown'>{content}</ReactMarkdown>
             </InfiniteScroll>
@@ -23,26 +23,26 @@ function PostTemplate({ content, data }) {
       </main>
       <style jsx>{`
             .container {
-            min-height: 100vh;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+              min-height: 100vh;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
             }
             main {
-            height: 100%;
-            margin: 1% auto;
-            width: 70%;
+              height: 100%;
+              margin: 1% auto;
+              width: 70%;
             }
 
             span {
-            text-align: center;
-            font-size: 0.7rem;
+              text-align: center;
+              font-size: 0.7rem;
             }
 
             a {
-            color: inherit;
-            text-decoration: none;
+              color: inherit;
+              text-decoration: none;
             }
             .markdown-container {
               padding: 1%;
@@ -122,6 +122,36 @@ function PostTemplate({ content, data }) {
               font-size: 1rem;
               margin: 0;
               color: black;
+          }
+          @media (max-width: 1400px) {
+            main {
+              width: 90%;
+              margin-top: 3%;
+            }
+            .markdown-container {
+              width: 100%;
+            }
+            .markdown {
+              width: 100%;
+            }
+          }
+          @media (max-width: 625px) {
+            main {
+              width: 98%;
+              margin-top: 10%;
+            }
+            .markdown-container {
+              margin: 0 auto;
+            }
+          }
+          @media (max-width: 565px) {
+            main {
+              margin-top: 10%;
+            }
+            .markdown-container {
+              width: 98%;
+              margin: 0 auto;
+            }
           }
         `}</style>
 

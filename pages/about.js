@@ -167,7 +167,32 @@ export default function About() {
             margin-top: 10%;
             margin-bottom: 0;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 1024px) {
+          .text-container {
+              margin-top: 10%;
+              flex-direction: column;
+              width: 100%;
+          }
+          .text-block {
+              width: 99%;
+          }
+          .skill-columns {
+              width: 100%;
+              flex-wrap: wrap;
+          }
+          .skill-column {
+              width: 50%;
+          }
+          h3 {
+            margin-top: 5%;
+            margin-bottom: 1%;
+          }
+          .skill-category-text {
+            font-size: 1rem;
+            border-top: 2px solid #FF9900;
+          }
+      }
+        @media (max-width: 500px) {
             main {
                 width: 90%;
             }

@@ -254,7 +254,22 @@ export default function Projects() {
                 .embla__next:hover {
                     border: 2px solid #ccc;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 1850px) {
+                    .slide-container {
+                        width: 60%;
+                    }
+                }
+                @media (max-width: 1650px) {
+                    .slide-container {
+                        width: 65%;
+                    }
+                }
+                @media (max-width: 1400px) {
+                    .slide-container {
+                        width: 75%;
+                    }
+                }
+                @media (max-width: 975px) {
                     .slide-container {
                         width: 85%;
                     }

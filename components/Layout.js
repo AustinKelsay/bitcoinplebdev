@@ -9,8 +9,6 @@ export default function Layout({ children }) {
         <Footer />
         <style jsx>{`
           .layout {
-            display: grid;
-            grid-template-rows: 1fr auto;
           }
         `}</style>
       </div>

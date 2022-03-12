@@ -112,7 +112,7 @@ export default function Blog() {
                 justify-content: space-evenly;
                 flex-wrap: wrap;
             }
-            @media (max-width: 375px) {
+            @media (max-width: 750px) {
                 .blogs {
                   width: 100%;
                   margin-top: 5%;

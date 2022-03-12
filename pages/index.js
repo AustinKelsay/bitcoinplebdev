@@ -135,22 +135,24 @@ export default function Home() {
       }
 
       .project-title {
-          margin: 0 auto;
-          margin-top: 1%;
-          text-align: center;
-          opacity: 0.8;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0.8;
+        font-size: 1.5rem;
       }
 
       .project-caption {
         width: 60%;
-          margin: 0 auto;
-          text-align: center;
-          opacity: 0.8;
-          font-family: Inconsolata, monospace;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0.8;
+        font-family: Inconsolata, monospace;
+        font-size: 1.2rem;
+        margin-top: 1%;
       }
 
       .embla__slide {
-          width: 50%;
+          width: 55%;
           margin: 1% auto;
           height: auto;
           border-radius: 10px;
@@ -187,14 +189,79 @@ export default function Home() {
       .embla__next:hover {
           border: 2px solid #ccc;
       }
-
-        @media (max-width: 600px) {
-          .grid {
+      @media (max-width: 1450px) {
+        .embla-project-container {
             width: 100%;
-            flex-direction: column;
-          }
         }
-        @media (max-width: 375px) {
+        .embla__slide {
+            width: 70%;
+        }
+        .project-title {
+            width: 80%;
+            margin-top: 1%;
+            font-size: 1.6rem;
+        }
+        .project-caption {
+            width: 80%;
+            margin-top: 2%;
+            font-size: 1.3rem;
+        }
+      }
+      @media (max-width: 1350px) {
+        .embla-project-container {
+            width: 100%;
+        }
+        .embla__slide {
+            width: 70%;
+        }
+        .project-title {
+            width: 80%;
+            margin-top: 1%;
+            font-size: 1.6rem;
+        }
+        .project-caption {
+            width: 80%;
+            margin-top: 2%;
+            font-size: 1.3rem;
+        }
+      }
+      @media (max-width: 1200px) {
+        .embla-project-container {
+            width: 100%;
+        }
+        .embla__slide {
+            width: 80%;
+        }
+        .project-title {
+            width: 100%;
+            margin-top: 1%;
+            font-size: 1.6rem;
+        }
+        .project-caption {
+            width: 100%;
+            margin-top: 2%;
+            font-size: 1.3rem;
+        }
+      }
+      @media (max-width: 1024px) {
+        .embla-project-container {
+            width: 100%;
+        }
+        .embla__slide {
+            width: 90%;
+        }
+        .project-title {
+            width: 100%;
+            margin-top: 1%;
+            font-size: 1.3rem;
+        }
+        .project-caption {
+            width: 100%;
+            margin-top: 3%;
+            font-size: 1.2rem;
+        }
+      }
+        @media (max-width: 600px) {
             .embla-project-container {
                 width: 100%;
             }
@@ -204,10 +271,12 @@ export default function Home() {
             .project-title {
                 width: 100%;
                 margin-top: 5%;
+                font-size: 1.3rem;
             }
             .project-caption {
                 width: 100%;
                 margin-top: 5%;
+                font-size: 1.2rem;
             }
         }
       `}</style>
