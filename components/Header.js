@@ -180,6 +180,12 @@ export default function Header() {
                     margin: 0;
                     color: black;
                 }
+                @media (max-width: 1250px) {
+                    .column-container {
+                        width: 80%;
+                        right: 10%;
+                    }
+                }
                 @media (max-width: 700px) {
                     .title {
                         font-size: 3rem;

@@ -151,7 +151,7 @@ export default function Home() {
       }
 
       .embla__slide {
-          width: 55%;
+          width: 50%;
           margin: 1% auto;
           height: auto;
           border-radius: 10px;
@@ -260,7 +260,7 @@ export default function Home() {
             font-size: 1.2rem;
         }
       }
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .embla-project-container {
                 width: 100%;
             }
@@ -274,6 +274,24 @@ export default function Home() {
             }
             .project-caption {
                 width: 100%;
+                margin-top: 5%;
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .embla-project-container {
+                width: 100%;
+            }
+            .embla__slide {
+                width: 80%;
+            }
+            .project-title {
+                width: 100%;
+                margin-top: 5%;
+                font-size: 1.3rem;
+            }
+            .project-caption {
+                width: 85%;
                 margin-top: 5%;
                 font-size: 1.2rem;
             }
