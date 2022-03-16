@@ -65,12 +65,15 @@ export default function Home() {
                       <div key={index} className='embla-project-container'>
                           <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
                           <h4 className="project-title">{project.header}</h4>
-                          <p className="project-caption">{project.caption}</p>
                       </div>
                       )
                     })
                   }
               </div>
+                <div className='text-container'>
+                    <p className='welcome-text'>Hello world!</p>
+                    <p className='welcome-text'>I'm Austin, a Bitcoin plebdev, this is my project portfolio and blog.</p>
+                </div>
           </div>
         </Layout>
       </main>
@@ -140,7 +143,15 @@ export default function Home() {
         font-size: 1.5rem;
       }
 
-      .project-caption {
+      .text-container {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 1%;
+        border-top: 2px solid black;
+      }
+
+      .welcome-text {
+        padding-top: 1%;
         width: 60%;
         margin: 0 auto;
         text-align: center;
@@ -151,7 +162,7 @@ export default function Home() {
       }
 
       .embla__slide {
-          width: 50%;
+          width: 45%;
           margin: 1% auto;
           height: auto;
           border-radius: 10px;
@@ -200,7 +211,10 @@ export default function Home() {
             margin-top: 1%;
             font-size: 1.6rem;
         }
-        .project-caption {
+        .text-container {
+            width: 70%;
+        }
+        .welcome-text {
             width: 80%;
             margin-top: 2%;
             font-size: 1.3rem;
@@ -218,7 +232,7 @@ export default function Home() {
             margin-top: 1%;
             font-size: 1.6rem;
         }
-        .project-caption {
+        .welcome-text {
             width: 80%;
             margin-top: 2%;
             font-size: 1.3rem;
@@ -236,7 +250,7 @@ export default function Home() {
             margin-top: 1%;
             font-size: 1.6rem;
         }
-        .project-caption {
+        .welcome-text {
             width: 100%;
             margin-top: 2%;
             font-size: 1.3rem;
@@ -254,7 +268,11 @@ export default function Home() {
             margin-top: 1%;
             font-size: 1.3rem;
         }
-        .project-caption {
+        .text-container {
+            width: 80%;
+            margin-top: 5%;
+        }
+        .welcome-text {
             width: 100%;
             margin-top: 3%;
             font-size: 1.2rem;
@@ -272,7 +290,11 @@ export default function Home() {
                 margin-top: 5%;
                 font-size: 1.3rem;
             }
-            .project-caption {
+            .text-container {
+                width: 90%;
+                margin-top: 10%;
+            }
+            .welcome-text {
                 width: 100%;
                 margin-top: 5%;
                 font-size: 1.2rem;
@@ -290,9 +312,12 @@ export default function Home() {
                 margin-top: 5%;
                 font-size: 1.3rem;
             }
-            .project-caption {
-                width: 85%;
-                margin-top: 5%;
+            .text-container {
+                width: 90%;
+                margin-top: 15%;
+            }
+            .welcome-text {
+                width: 80%;
                 font-size: 1.2rem;
             }
         }
