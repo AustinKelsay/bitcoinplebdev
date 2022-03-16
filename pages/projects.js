@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback} from 'react'
+import React, {useEffect, useState, useCallback} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Layout from '../components/Layout'
 import gameOfLife from "../images/gameOfLife.jpg"
@@ -43,6 +43,7 @@ const projects = [
 
 export default function Projects() {
     const [emblaRef, emblaApi] = useEmblaCarousel({loop: true})
+    const [caption, setCaption] = useState('')
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()
@@ -66,7 +67,7 @@ export default function Projects() {
                                         <button className="arrow right" onClick={scrollNext} />
                                     </div>
                                     <h4 className="project-title">{project.header}</h4>
-                                    <p className='project-caption'>{project.caption}</p>
+                                    <p className="project-caption">{project.caption}</p>
                                     <div className='project-button-container'>
                                         <a href={project.link} target='_blank'>
                                             <button className='project-button'>
@@ -269,7 +270,7 @@ export default function Projects() {
                 }
                 @media (max-width: 975px) {
                     .slide-container {
-                        width: 85%;
+                        width: 70%;
                     }
                     .arrow {
                         border-width: 0 6px 6px 0;
@@ -281,6 +282,9 @@ export default function Projects() {
                         cursor: pointer;
                         transition: all 0.2s ease-in-out;
                     }
+                    .project-button-container {
+                        width: 80%;
+                    }
                     .right {
                         margin-left: 0;
                     }
@@ -291,19 +295,15 @@ export default function Projects() {
                         margin-top: 5%;
                     }
                     .project-caption {
-                        width: 100%;
-                        margin-bottom: 10%;
+                        width: 80%;
                     }
                 }
             `}</style>
             <style jsx global>{`
                 html,
                 body {
-                padding: 0;
-                margin: auto;
-                font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-                    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-                    sans-serif;
+                    padding: 0;
+                    margin: auto;
                     transition: all ease-in 20s;
                     -webkit-background-size: cover;
                     -moz-background-size: cover;

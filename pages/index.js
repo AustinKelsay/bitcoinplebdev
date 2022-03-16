@@ -292,7 +292,7 @@ export default function Home() {
             }
             .text-container {
                 width: 90%;
-                margin-top: 10%;
+                margin-top: 5%;
             }
             .welcome-text {
                 width: 100%;
@@ -314,7 +314,7 @@ export default function Home() {
             }
             .text-container {
                 width: 90%;
-                margin-top: 15%;
+                margin-top: 10%;
             }
             .welcome-text {
                 width: 80%;

@@ -188,7 +188,7 @@ export default function Header() {
                 }
                 @media (max-width: 700px) {
                     .title {
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                     }
                     .column-container {
                         width: 100%;
@@ -203,7 +203,7 @@ export default function Header() {
                         right: 0;
                     }
                     .btn {
-                        padding: 7%;
+                        padding: 0.25em 0.75em;
                     }
                     .btn-text {
                         font-size: 0.8rem;

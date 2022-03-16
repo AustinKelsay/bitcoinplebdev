@@ -212,7 +212,7 @@ export default function About() {
                 width: 50%;
             }
             h3 {
-              margin-top: 5%;
+              margin-top: 2%;
               margin-bottom: 1%;
             }
             .skill-category-text {
