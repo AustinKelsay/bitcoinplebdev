@@ -43,18 +43,11 @@ const projects = [
     }
 ]
 
-const resize = () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
 export default function Home() {
   const options = { delay: 3000 } // Options
   const autoplayRoot = (emblaRoot) => emblaRoot.parentElement // Root node
   const autoplay = Autoplay(options, autoplayRoot)
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [autoplay])
-
-  window.addEventListener('resize', resize)
 
   return (
     <div className="container">
@@ -87,8 +80,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-          height: calc(var(--vh, 1vh) * 100);
+          height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -334,6 +326,8 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
+          min-height: 100vh;
+          min-height: -webkit-fill-available;
           padding: 0;
           margin: auto;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
