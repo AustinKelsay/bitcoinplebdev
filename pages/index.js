@@ -49,8 +49,9 @@ export default function Home() {
   const autoplayRoot = (emblaRoot) => emblaRoot.parentElement // Root node
   const autoplay = Autoplay(options, autoplayRoot)
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [autoplay])
+  const height = window.innerHeight+'px'
   return (
-    <div className="container">
+    <div style={{height: height}} className="container">
       <Head>
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -80,7 +81,6 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
