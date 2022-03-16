@@ -43,15 +43,21 @@ const projects = [
     }
 ]
 
+const resize = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
 export default function Home() {
   const options = { delay: 3000 } // Options
   const autoplayRoot = (emblaRoot) => emblaRoot.parentElement // Root node
   const autoplay = Autoplay(options, autoplayRoot)
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [autoplay])
-  const height = window.innerHeight+'px'
+
+  window.addEventListener('resize', resize)
+
   return (
-    <div style={{height: height}} className="container">
+    <div className="container">
       <Head>
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -81,6 +87,8 @@ export default function Home() {
 
       <style jsx>{`
         .container {
+          height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+          height: calc(var(--vh, 1vh) * 100);
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
