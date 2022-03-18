@@ -43,7 +43,14 @@ const projects = [
 
 export default function Projects() {
     const [emblaRef, emblaApi] = useEmblaCarousel({loop: true})
-    const [caption, setCaption] = useState('')
+    const [width, setwidth] = useState('')
+
+    useEffect(() => {
+        setwidth(window.innerWidth)
+        window.addEventListener('resize', () => {
+            setwidth(window.innerWidth)
+        })
+    },[])
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()
@@ -63,11 +70,12 @@ export default function Projects() {
                                 <div key={index} className='embla-project-container'>
                                     <div className='slide-container'>
                                         <button className="arrow left" onClick={scrollPrev} />
-                                        <img src={project.src} className="embla__slide"/>
+                                        <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
                                         <button className="arrow right" onClick={scrollNext} />
                                     </div>
                                     <h4 className="project-title">{project.header}</h4>
                                     <p className="project-caption">{project.caption}</p>
+                                    {width > 975 ?
                                     <div className='project-button-container'>
                                         <a href={project.link} target='_blank'>
                                             <button className='project-button'>
@@ -84,6 +92,7 @@ export default function Projects() {
                                             </button>
                                         </a>
                                     </div>
+                                    : null}
                                 </div>
                             )
                         })
@@ -154,11 +163,13 @@ export default function Projects() {
                     margin: 0 auto;
                     margin-top: 1%;
                     text-align: center;
+                    font-family: Inconsolata, monospace;
                 }
                 .project-caption {
                     width: 70%;
                     margin: 1% auto;
                     text-align: center;
+                    font-family: Inconsolata, monospace;
                 }
                 .slide-container {
                     display: flex;
@@ -284,6 +295,7 @@ export default function Projects() {
                     }
                     .project-button-container {
                         width: 80%;
+                        margin: 0 auto;
                     }
                     .right {
                         margin-left: 0;
@@ -293,9 +305,11 @@ export default function Projects() {
                     }
                     .project-title {
                         margin-top: 5%;
+                        font-family: none;
                     }
                     .project-caption {
                         width: 80%;
+                        font-family: none;
                     }
                 }
             `}</style>
