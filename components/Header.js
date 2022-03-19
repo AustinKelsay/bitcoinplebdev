@@ -26,10 +26,10 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className='column'>
-                    <Link href='projects'>
+                    <Link href='experience'>
                     <button className='btn draw-border'>
                         <p className='btn-text'>
-                        Projects
+                        Experience
                         </p>
                     </button>
                     </Link>

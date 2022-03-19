@@ -61,24 +61,7 @@ const projects = [
       }
 ]
 
-export default function Projects() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({loop: true})
-    const [width, setwidth] = useState('')
-
-    useEffect(() => {
-        setwidth(window.innerWidth)
-        window.addEventListener('resize', () => {
-            setwidth(window.innerWidth)
-        })
-    },[])
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])
+export default function Experience() {
     return (
         <div className="container">
           <main>
