@@ -203,7 +203,7 @@ export default function Header() {
                         right: 0;
                     }
                     .btn {
-                        padding: 0.25em 0.75em;
+                        padding: 0.3em 0.8em;
                     }
                     .btn-text {
                         font-size: 0.8rem;
