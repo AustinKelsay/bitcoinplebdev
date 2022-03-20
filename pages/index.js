@@ -55,7 +55,6 @@ export default function Home() {
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <Layout>
           <div className="embla" ref={emblaRef}>
