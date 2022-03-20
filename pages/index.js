@@ -80,7 +80,8 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          height: 100vh;
+          min-height: 100vh;
+          height: calc(100vh - calc(100vh - 100%));
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
