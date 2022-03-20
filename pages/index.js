@@ -54,6 +54,15 @@ export default function Home() {
       <Head>
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
+        <script>
+          {`
+            const appHeight = () => {
+              document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px')
+            }
+            window.addEventListener('resize', appHeight)
+            appHeight();
+          `}
+        </script>
       </Head>
 
       <main>
@@ -326,7 +335,7 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
-          height: 100%;
+          height: 100vh;
           padding: 0;
           margin: auto;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
