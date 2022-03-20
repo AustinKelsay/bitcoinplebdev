@@ -326,8 +326,7 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
-          min-height: 100vh;
-          min-height: -webkit-fill-available;
+          height: 100%;
           padding: 0;
           margin: auto;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
