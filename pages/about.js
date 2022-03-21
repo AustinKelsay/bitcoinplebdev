@@ -88,6 +88,7 @@ export default function About() {
 
       <style jsx>{`
         .container {
+          min-height: 100vh;
           height: 100vh;
           height: -webkit-fill-available;
           display: flex;
