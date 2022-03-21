@@ -73,8 +73,8 @@ export default function Blog() {
 
         <style jsx>{`
             .container {
-            min-height: 100vh;
-            height: 100%;
+            height: 100vh;
+            height: -webkit-fill-available;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
