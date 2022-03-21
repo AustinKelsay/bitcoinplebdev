@@ -20,8 +20,10 @@ export default function About() {
             >
             <div className='text-container'>
               <div className="text-block">
-                <h3>MY MISSION</h3>
-                <p>To participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, to be surounded by colleagues and teams building impactful software.</p>
+                <h3>ABOUT</h3>
+                <p>My name is Austin, I'm a fullstack developer focussed on Bitcoin. My mission is to participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, to be surounded by colleagues and teams building impactful software.</p>
+                <span>Location: Austin TX, or remote</span>
+                <span>Email: bitcoinplebdev@protonmail.com</span>
               </div>
               <div className="text-block">
                 <h3>MY HISTORY</h3>
@@ -103,8 +105,8 @@ export default function About() {
         }
 
         span {
-          text-align: center;
-          font-size: 0.7rem;
+          padding-top: 2%;
+          font-size: 0.8rem;
         }
 
         a {
@@ -121,6 +123,8 @@ export default function About() {
             display: flex;
         }
         .text-block {
+          display: flex;
+          flex-direction: column;
           width: 48%;
           margin: 1%;
           padding:1%;
