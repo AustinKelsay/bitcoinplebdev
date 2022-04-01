@@ -19,7 +19,7 @@ const projects = [
         altText: "Alby",
         header: "Alby",
         github: "https://github.com/getAlby",
-        caption: "Contributed feature that allows users to tip on reddit and recognize lightning adresses on reddit user descriptions as well as extending the LUD-18 payer data capabilities for the wallet.",
+        caption: "Contributed feature that allows users to tip on reddit and recognize lightning adresses on reddit user descriptions as well as extending the LUD-18 payer data capabilities for the wallet/extension.",
         role: "Open Source Contributor",
         link: "https://getalby.com",
     },
