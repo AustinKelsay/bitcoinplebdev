@@ -19,7 +19,7 @@ const projects = [
         altText: "Alby",
         header: "Alby",
         github: "https://github.com/getAlby",
-        caption: "Contributed feature that allows users to tip on reddit and recognize lightning adresses on reddit user deescriptions",
+        caption: "Contributed feature that allows users to tip on reddit and recognize lightning adresses on reddit user descriptions as well as extending the LUD-18 payer data capabilities for the wallet.",
         role: "Open Source Contributor",
         link: "https://getalby.com",
     },
@@ -73,7 +73,7 @@ export default function Experience() {
                     <div className='blogs'>
                         {projects.map((project, index) => {
                             return(
-                                <Card style={{margin: "3% auto"}} key={index} sx={{ maxWidth: 450, maxHeight: 500, backgroundColor: "rgb(255, 255, 255, 0.8);" }}>
+                                <Card style={{margin: "3% auto"}} key={index} sx={{ maxWidth: 450, maxHeight: 550, backgroundColor: "rgb(255, 255, 255, 0.8);" }}>
                                     <CardMedia
                                         component="img"
                                         width="150"
