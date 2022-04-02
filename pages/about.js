@@ -23,7 +23,7 @@ export default function About() {
         <Layout>
           <InfiniteScroll
             dataLength={3}
-            height={'65vh'}
+            height={'70vh'}
             >
             <div className='text-container'>
               <div className="text-block">
@@ -98,7 +98,6 @@ export default function About() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          height: 100vh;
           height: -webkit-fill-available;
           padding: 0 0.5rem;
           display: flex;
@@ -221,7 +220,7 @@ export default function About() {
                 width: 90%;
             }
             .text-container {
-                margin-top: 15%;
+                margin-top: 12%;
                 flex-direction: column;
                 width: 100%;
             }

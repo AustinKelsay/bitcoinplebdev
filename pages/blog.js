@@ -81,7 +81,6 @@ export default function Blog() {
         <style jsx>{`
             .container {
               min-height: 100vh;
-              height: 100vh;
               height: -webkit-fill-available;
               padding: 0 0.5rem;
               display: flex;
