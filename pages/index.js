@@ -342,7 +342,7 @@ export default function Home() {
                 width: 100%;
             }
             .embla__slide {
-                width: 40%;
+                width: 35%;
             }
         }
       `}</style>
