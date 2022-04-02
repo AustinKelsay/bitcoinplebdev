@@ -5,9 +5,15 @@ import Layout from '../../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 function PostTemplate({ content, data }) {
+  const [windowWidth, setWindowWidth] = useState(null)
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth)
+    }
+  }, [])
   return (
-    <div className='container'>
+    <div className={windowWidth > 460 ? "container" : "mobile-container"}>
       <main>
         <Layout>
           <div className='markdown-container'>
@@ -23,10 +29,23 @@ function PostTemplate({ content, data }) {
       <style jsx>{`
             .container {
               min-height: 100vh;
-              height: 100%;
+              height: 100vh;
+              height: -webkit-fill-available;
+              padding: 0 0.5rem;
               display: flex;
               flex-direction: column;
-              justify-content: space-evenly;
+              justify-content: center;
+              align-items: center;
+            }
+    
+            .mobile-container {
+              height: 100vh;
+              height: -webkit-fill-available;
+              padding: 0 0.5rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
             }
             main {
               height: 100%;

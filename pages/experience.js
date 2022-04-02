@@ -75,7 +75,7 @@ export default function Experience() {
             <Layout>
                     <InfiniteScroll
                         dataLength={projects.length}
-                        height={'65vh'}
+                        height={'60vh'}
                     >
                     <div className='blogs'>
                         {projects.map((project, index) => {

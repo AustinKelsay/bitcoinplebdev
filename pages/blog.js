@@ -45,7 +45,7 @@ export default function Blog() {
         <Layout>
                 <InfiniteScroll
                     dataLength={posts.length}
-                    height={'65vh'}
+                    height={'60vh'}
                 >
                 <div className='blogs'>
                     {posts.map((post, index) => {
