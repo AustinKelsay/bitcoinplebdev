@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'
@@ -50,7 +50,7 @@ function PostTemplate({ content, data }) {
             main {
               height: 100%;
               margin: 1% auto;
-              width: 70%;
+              width: 80%;
             }
 
             span {
