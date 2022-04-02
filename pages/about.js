@@ -5,8 +5,15 @@ import Layout from '../components/Layout'
 
 
 export default function About() {
+  const [windowWidth, setWindowWidth] = useState(null)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth)
+    }
+  }, [])
   return (
-    <div className="container">
+    <div className={windowWidth > 460 ? "container" : "mobile-container"}>
       <Head>
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -93,9 +100,21 @@ export default function About() {
           min-height: 100vh;
           height: 100vh;
           height: -webkit-fill-available;
+          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
-          justify-content: space-evenly;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .mobile-container {
+          height: 100vh;
+          height: -webkit-fill-available;
+          padding: 0 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
         main {

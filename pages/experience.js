@@ -62,8 +62,15 @@ const projects = [
 ]
 
 export default function Experience() {
+  const [windowWidth, setWindowWidth] = useState(null)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth)
+    }
+  }, [])
     return (
-        <div className="container">
+      <div className={windowWidth > 460 ? "container" : "mobile-container"}>
           <main>
             <Layout>
                     <InfiniteScroll
@@ -105,17 +112,28 @@ export default function Experience() {
     
             <style jsx>{`
                 .container {
-                min-height: 100vh;
-                height: 100vh;
-                height: -webkit-fill-available;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
+                  min-height: 100vh;
+                  height: 100vh;
+                  height: -webkit-fill-available;
+                  padding: 0 0.5rem;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                }
+                .mobile-container {
+                  height: 100vh;
+                  height: -webkit-fill-available;
+                  padding: 0 0.5rem;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
                 }
                 main {
-                height: 100%;
-                margin: 1% auto;
-                width: 80%;
+                  height: 100%;
+                  margin: 1% auto;
+                  width: 80%;
                 }
     
                 span {

@@ -48,9 +48,16 @@ export default function Home() {
   const autoplayRoot = (emblaRoot) => emblaRoot.parentElement // Root node
   const autoplay = Autoplay(options, autoplayRoot)
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [autoplay])
+  const [windowWidth, setWindowWidth] = useState(null)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth)
+    }
+  }, [])
 
   return (
-    <div className="container">
+    <div className={windowWidth > 460 ? "container" : "mobile-container"}>
       <Head>
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -88,14 +95,21 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-
-        main {
-          flex: 1 0 auto;
+        .mobile-container {
+          height: 100vh;
+          height: -webkit-fill-available;
+          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
-          justify-content: space-evenly;
+          justify-content: center;
+          align-items: center;
         }
-
+        main {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+          }
         span {
           text-align: center;
         }
@@ -112,70 +126,70 @@ export default function Home() {
           overflow: hidden;
           width: 100%;
           border-radius: 10px;
-      }
+        }
 
-      .embla__container {
-          display: flex;
-          border-radius: 10px;
-      }
+        .embla__container {
+            display: flex;
+            border-radius: 10px;
+        }
 
-      .embla-project-container {
+        .embla-project-container {
+            margin: 0 auto;
+            position: relative;
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            border-radius: 25px;
+        }
+
+        .embla__slide:hover {
+          box-shadow:
+          0 0 5px 3px #FF9900,
+          0 0 5px 3px #fff;
+            transition: box-shadow 0.5s;
+            cursor: pointer;
+        }
+
+        .project-title {
           margin: 0 auto;
-          position: relative;
-          flex: 0 0 100%;
-          display: flex;
-          flex-direction: column;
-          width: 40%;
-          border-radius: 25px;
-      }
+          text-align: center;
+          opacity: 0.8;
+          font-size: 1.5rem;
+        }
 
-      .embla__slide:hover {
-        box-shadow:
-        0 0 5px 3px #FF9900,
-        0 0 5px 3px #fff;
-          transition: box-shadow 0.5s;
-          cursor: pointer;
-      }
-
-      .project-title {
-        margin: 0 auto;
-        text-align: center;
-        opacity: 0.8;
-        font-size: 1.5rem;
-      }
-
-      .text-container {
-        width: 60%;
-        margin: 0 auto;
-        margin-top: 1%;
-        border-top: 2px solid black;
-      }
-
-      .welcome-text {
-        padding-top: 1%;
-        width: 60%;
-        margin: 0 auto;
-        text-align: center;
-        opacity: 0.8;
-        font-family: Inconsolata, monospace;
-        font-size: 1.2rem;
-        margin-top: 1%;
-      }
-
-      .embla__slide {
-          width: 45%;
-          margin: 1% auto;
-          height: auto;
-          border-radius: 10px;
-      }
-
-      .embra-button-container {
+        .text-container {
           width: 60%;
           margin: 0 auto;
-          margin-top: 2%;
-          display: flex;
-          justify-content: space-around;
-      }
+          margin-top: 1%;
+          border-top: 2px solid black;
+        }
+
+        .welcome-text {
+          padding-top: 1%;
+          width: 60%;
+          margin: 0 auto;
+          text-align: center;
+          opacity: 0.8;
+          font-family: Inconsolata, monospace;
+          font-size: 1.2rem;
+          margin-top: 1%;
+        }
+
+        .embla__slide {
+            width: 45%;
+            margin: 1% auto;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .embra-button-container {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-around;
+        }
 
       .embla__prev,
       .embla__next {
@@ -323,13 +337,9 @@ export default function Home() {
             }
         }
       `}</style>
-
       <style jsx global>{`
-        #__next,
         html,
         body {
-          min-height: 100%;
-          min-height: -webkit-fill-available;
           padding: 0;
           margin: auto;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
