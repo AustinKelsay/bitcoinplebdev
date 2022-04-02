@@ -348,6 +348,7 @@ export default function Home() {
             }
             .text-container {
               font-size: 1rem;
+              margin: 0.5% auto;
             }
         }
       `}</style>
