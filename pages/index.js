@@ -336,7 +336,6 @@ export default function Home() {
                 font-size: 1.2rem;
             }
         }
-
         @media (max-height: 900px) {
             .embla-project-container {
                 width: 100%;
@@ -345,8 +344,10 @@ export default function Home() {
                 width: 35%;
             }
             .project-title {
-                margin-top: 3%;
+                margin-top: 1%;
             }
+            .text-container {
+              font-size: 1rem;
         }
       `}</style>
       <style jsx global>{`
