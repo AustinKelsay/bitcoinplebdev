@@ -26,7 +26,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className='column'>
-                    <Link href='experience'>
+                    <Link href='/experience'>
                     <button className='btn draw-border'>
                         <p className='btn-text'>
                         Experience
