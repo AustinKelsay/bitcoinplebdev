@@ -344,6 +344,9 @@ export default function Home() {
             .embla__slide {
                 width: 35%;
             }
+            .project-title {
+                margin-top: 3%;
+            }
         }
       `}</style>
       <style jsx global>{`
