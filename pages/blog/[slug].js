@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'
@@ -29,7 +29,7 @@ function PostTemplate({ content, data }) {
       <style jsx>{`
             .container {
               min-height: 100vh;
-              height: 100vh;
+              height: 100%;
               height: -webkit-fill-available;
               padding: 0 0.5rem;
               display: flex;
@@ -44,7 +44,7 @@ function PostTemplate({ content, data }) {
               padding: 0 0.5rem;
               display: flex;
               flex-direction: column;
-              justify-content: center;
+              justify-content: space-evenly;
               align-items: center;
             }
             main {
