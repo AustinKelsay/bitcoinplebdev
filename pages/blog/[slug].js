@@ -19,7 +19,7 @@ function PostTemplate({ content, data }) {
           <div className='markdown-container'>
             <InfiniteScroll
               dataLength={content.length}
-              height={'70vh'}
+              height={'65vh'}
             >
               <ReactMarkdown className='markdown'>{content}</ReactMarkdown>
             </InfiniteScroll>
