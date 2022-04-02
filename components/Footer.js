@@ -5,7 +5,7 @@ export default function Footer({ Component, pageProps }) {
     <div className="container">
         <footer>
             <SocialIcon style={{border: "2px solid white", borderRadius: "25px"}} fgColor="white" url="https://github.com/austinkelsay" />
-            <SocialIcon style={{border: "2px solid white", borderRadius: "25px"}} fgColor="white" url="https://twitter.com/ASeries_ofTubes" />
+            <SocialIcon style={{border: "2px solid white", borderRadius: "25px"}} fgColor="white" url="https://twitter.com/bitcoinplebdev" />
         </footer>
         <style jsx>{`
         container {

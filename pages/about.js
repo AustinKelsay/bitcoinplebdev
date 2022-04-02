@@ -23,7 +23,7 @@ export default function About() {
         <Layout>
           <InfiniteScroll
             dataLength={3}
-            height={'70vh'}
+            height={'65vh'}
             >
             <div className='text-container'>
               <div className="text-block">

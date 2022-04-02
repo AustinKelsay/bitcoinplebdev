@@ -336,6 +336,15 @@ export default function Home() {
                 font-size: 1.2rem;
             }
         }
+
+        @media (max-height: 900px) {
+            .embla-project-container {
+                width: 100%;
+            }
+            .embla__slide {
+                width: 40%;
+            }
+        }
       `}</style>
       <style jsx global>{`
         html,

@@ -209,6 +209,18 @@ export default function Header() {
                         font-size: 0.8rem;
                     }
                 }
+                @media (max-height: 900px) {
+                    .column-container {
+                        width: 60%;
+                        left: 0;
+                        right: 0;
+                    }
+                    .column-container-alt {
+                        width: 40%;
+                        left: 0;
+                        right: 0;
+                    }
+                }
             `}</style>
         </div>
     )
