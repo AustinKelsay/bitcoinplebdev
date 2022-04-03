@@ -342,6 +342,7 @@ export default function Home() {
             }
             .embla__slide {
                 width: 35%;
+                margin-top: 3%;
             }
             .project-title {
                 margin-top: 1%;
