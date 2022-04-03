@@ -28,7 +28,7 @@ export default function About() {
             <div className='text-container'>
               <div className="text-block">
                 <h3>ABOUT</h3>
-                <p>My name is Austin, I'm a fullstack developer focussed on Bitcoin. My mission is to participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, to be surounded by colleagues and teams building impactful software.</p>
+                <p>My name is Austin, I'm a fullstack developer focussed on Bitcoin. My mission is to participate in building software in the Bitcoin ecosystem, to focus on impacting and empowering individuals, and to be surounded by colleagues and teams building impactful software.</p>
                 <span>Location: Austin TX, or remote</span>
                 <span>Email: bitcoinplebdev@protonmail.com</span>
               </div>

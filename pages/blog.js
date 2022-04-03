@@ -14,18 +14,11 @@ export default function Blog() {
   const [posts, setPosts] = useState([
       {
           title: 'Hello World',
-          date: '2022-03-07',
+          date: '2022-04-01',
           url: "/blog/hello",
           image: Hello.src,
-          first_paragraph: "I’m Austin. Here I will be posting about my journey as a plebdev getting into Bitcoin/FOSS development. \n\ Expect to see: \n\ - Programming tips, tricks, and hard lessons learned. \n - Highlights of important FOSS developments in the Bitcoin space \n - High signal Bitcoin/dev resources \n - Tasteful memes"
+          first_paragraph: "Hello world! \n I’m Austin. Here I will be posting about my journey as a pleb/dev getting into Bitcoin/FOSS development."
       },
-      {
-          title: 'Journey to my first Bitcoin FOSS contribution (and tips for the other plebdevs)',
-          date: '2022-03-07',
-          url: "/blog/journey",
-          image: Journey.src,
-          first_paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      }
   ])
   const [windowWidth, setWindowWidth] = useState(null)
 
