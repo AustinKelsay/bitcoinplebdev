@@ -16,14 +16,12 @@ function PostTemplate({ content, data }) {
     <div className={windowWidth > 460 ? "container" : "mobile-container"}>
       <main>
         <Layout>
-          <div className='markdown-container'>
             <InfiniteScroll
               dataLength={content.length}
               height={'65vh'}
             >
               <ReactMarkdown className='markdown'>{content}</ReactMarkdown>
             </InfiniteScroll>
-          </div>
         </Layout>
       </main>
       <style jsx>{`
