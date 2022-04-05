@@ -293,6 +293,22 @@ export default function Home() {
             font-size: 1.2rem;
         }
       }
+      @media (max-height: 900px) and (max-width: 1500px) {
+          .embla-project-container {
+              width: 100%;
+          }
+          .embla__slide {
+              width: 35%;
+              margin-top: 3%;
+          }
+          .project-title {
+              margin-top: 1%;
+          }
+          .text-container {
+            font-size: 1rem;
+            margin: 0.5% auto;
+          }
+      }
         @media (max-width: 650px) {
             .embla-project-container {
                 width: 100%;
@@ -334,22 +350,6 @@ export default function Home() {
             .welcome-text {
                 width: 80%;
                 font-size: 1.2rem;
-            }
-        }
-        @media (max-height: 950px) and (max-width: 1550px) {
-            .embla-project-container {
-                width: 100%;
-            }
-            .embla__slide {
-                width: 35%;
-                margin-top: 3%;
-            }
-            .project-title {
-                margin-top: 1%;
-            }
-            .text-container {
-              font-size: 1rem;
-              margin: 0.5% auto;
             }
         }
       `}</style>
