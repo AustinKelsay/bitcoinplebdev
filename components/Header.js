@@ -209,7 +209,7 @@ export default function Header() {
                         font-size: 0.8rem;
                     }
                 }
-                @media (max-height: 900px) {
+                @media (max-height: 950px) and (max-width: 1550px) {
                     .column-container {
                         width: 60%;
                         left: 0;

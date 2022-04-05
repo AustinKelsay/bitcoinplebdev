@@ -336,7 +336,7 @@ export default function Home() {
                 font-size: 1.2rem;
             }
         }
-        @media (max-height: 900px) {
+        @media (max-height: 950px) and (max-width: 1550px) {
             .embla-project-container {
                 width: 100%;
             }
