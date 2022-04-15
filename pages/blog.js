@@ -14,7 +14,7 @@ export default function Blog() {
   const [posts, setPosts] = useState([
       {
           title: 'Hello World',
-          date: '2022-04-01',
+          date: '2022-04-15',
           url: "/blog/hello",
           image: Hello.src,
           first_paragraph: "Hello world! \n I’m Austin. Here I will be posting about my journey as a pleb/dev getting into Bitcoin/FOSS development."
