@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import Hello from "../images/hello.jpg"
-import Journey from "../images/journey_cover.png"
+import Journey from "../images/journey-cover.png"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
