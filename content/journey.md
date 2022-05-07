@@ -3,7 +3,7 @@ title: "Journey to my first Bitcoin FOSS contribution (and tips for the other pl
 date: "2020-10-01"
 ---
 
-[![Alt text](https://github.com/AustinKelsay/bitcoinplebdev/blob/main/images/journey_cover.png?raw=true](https://github.com)
+[![Alt text](https://github.com/AustinKelsay/bitcoinplebdev/blob/main/images/journey-cover.jpeg?raw=true)](https://github.com)
 
 # Journey to my first Bitcoin FOSS contribution (and tips for the other plebdevs)
 
