@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import Hello from "../images/hello.jpg"
-import Journey from "../images/journey.png"
+import Journey from "../images/journey_cover.png"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -19,6 +19,13 @@ export default function Blog() {
           image: Hello.src,
           first_paragraph: "Hello world! \n I’m Austin. Here I will be posting about my journey as a pleb/dev getting into Bitcoin/FOSS development."
       },
+      {
+        title: 'From Bitcoin pleb to bitcoinplebdev (my coding journey)',
+        date: '2022-05-07',
+        url: "/blog/journey",
+        image: Journey.src,
+        first_paragraph: "I was not a “technical” person by any means around 2017 when I was first discovering Bitcoin (and I hardly am today) but as soon as the concept of open digital money clicked with me I knew that I wanted to be involved in this movement somehow."
+    }
   ])
   const [windowWidth, setWindowWidth] = useState(null)
 
