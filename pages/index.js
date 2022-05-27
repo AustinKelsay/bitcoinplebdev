@@ -15,7 +15,7 @@ const projects = [
       header: "Bitcoin Knowledge Bot",
       github: "https://github.com/bitcoin-knowledge/bitcoin-knowledge-bot",
       caption: "A question & answer AI bot that also suggests articles/podcasts. Powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge",
-      link: "https://bitcoin-knowledge-bot.vercel.app"
+      link: "https://bitcoin-knowledge-bot-frontend.vercel.app"
   },
   {
       src: Reclaim.src,
