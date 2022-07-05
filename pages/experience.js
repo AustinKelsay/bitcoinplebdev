@@ -12,8 +12,18 @@ import fbExplorer from "../images/fbexplorer.jpg"
 import Reclaim from "../images/reclaimWide.png"
 import KnowledgeBot from "../images/bitcoinKnowledgeBot.png"
 import Alby from "../images/alby.png"
+import Sats4tips from "../images/sats4tips.png"
 
 const projects = [
+  {
+    src: Sats4tips.src,
+    altText: 'Sats4Tips',
+    header: "Sats4Tips",
+    github: "https://github.com/cmdruid/lightning-tip-jar",
+    caption: "Your own personalized space for collecting tips in Bitcoin. \n I helped build out the frontend and styles with my team at the Bitcoin++ hackathon",
+    role: "Frontend Developer",
+    link: "https://sats4.tips"
+  },
     {
         src: Alby.src,
         altText: "Alby",

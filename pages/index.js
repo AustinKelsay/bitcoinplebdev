@@ -7,6 +7,7 @@ import gameOfLife from "../images/gameOfLife.jpg"
 import fbExplorer from "../images/fbexplorer.jpg"
 import Reclaim from "../images/reclaimWide.png"
 import KnowledgeBot from "../images/bitcoinKnowledgeBot.png"
+import Sats4tips from "../images/sats4tips.png"
 
 const projects = [
   {
@@ -16,6 +17,14 @@ const projects = [
       github: "https://github.com/bitcoin-knowledge/bitcoin-knowledge-bot",
       caption: "A question & answer AI bot that also suggests articles/podcasts. Powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge",
       link: "https://bitcoin-knowledge-bot-frontend.vercel.app"
+  },
+  {
+    src: Sats4tips.src,
+    altText: 'Sats4Tips',
+    header: "Sats4Tips",
+    github: "https://github.com/cmdruid/lightning-tip-jar",
+    caption: "Your own personalized space for collecting tips in Bitcoin.",
+    link: "https://sats4.tips"
   },
   {
       src: Reclaim.src,
