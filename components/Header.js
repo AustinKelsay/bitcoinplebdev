@@ -1,70 +1,58 @@
-import React, {useEffect} from 'react';
-import Link from "next/link"
-import {useRouter} from 'next/router'
+import React, { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
-    const router = useRouter()
-    let url = ""
-    if (typeof window !== 'undefined') {
-        url = window.location.href.split('/');
-    }
-    const page = url[url.length - 1];
-    return (
-        <div>
-            <h1 className="title">
-                {page === "" ? "plebdev" : page}
-            </h1>
-            {page === "" ?
-            <div className='column-container'>
-                <div className='column'>
-                    <Link href='/about'>
-                    <button className='btn draw-border'>
-                        <p className='btn-text'>
-                        About
-                        </p>
-                    </button>
-                    </Link>
-                </div>
-                <div className='column'>
-                    <Link href='/experience'>
-                    <button className='btn draw-border'>
-                        <p className='btn-text'>
-                        Experience
-                        </p>
-                    </button>
-                    </Link>
-                </div>
-                <div className='column'>
-                    <Link href='/blog'>
-                    <button className='btn draw-border'>
-                        <p className='btn-text'>
-                        Blog
-                        </p>
-                    </button>
-                    </Link>
-                </div>
-            </div>
-            :
-            <div className='column-container-alt'>
-                <div className='column'>
-                    <button onClick={() => router.back()} className='btn draw-border'>
-                        <p className='btn-text'>
-                            back
-                        </p>
-                    </button>
-                </div>
-                <div className='column'>
-                    <Link href='/'>
-                        <button className='btn draw-border'>
-                            <p className='btn-text'>
-                            Home
-                            </p>
-                        </button>
-                    </Link>
-                </div>
-            </div>
-        }
-            <style jsx>{`
+  const router = useRouter();
+  let url = "";
+  if (typeof window !== "undefined") {
+    url = window.location.href.split("/");
+  }
+  const page = url[url.length - 1];
+  return (
+    <div>
+      <h1 className="title">{page === "" ? "plebdev" : page}</h1>
+      {page === "" ? (
+        <div className="column-container">
+          <div className="column">
+            <Link href="/about">
+              <button className="btn draw-border">
+                <p className="btn-text">About</p>
+              </button>
+            </Link>
+          </div>
+          <div className="column">
+            <Link href="/experience">
+              <button className="btn draw-border">
+                <p className="btn-text">Experience</p>
+              </button>
+            </Link>
+          </div>
+          <div className="column">
+            <Link href="/blog">
+              <button className="btn draw-border">
+                <p className="btn-text">Blog</p>
+              </button>
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <div className="column-container-alt">
+          <div className="column">
+            <button onClick={() => router.back()} className="btn draw-border">
+              <p className="btn-text">back</p>
+            </button>
+          </div>
+          <div className="column">
+            <Link href="/">
+              <button className="btn draw-border">
+                <p className="btn-text">Home</p>
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
+      <style jsx>{`
             .title {
                 width: 100%;
                 font-family: Inconsolata, monospace;
@@ -87,7 +75,7 @@ export default function Header() {
                     margin: 1% auto;
                     position: absolute;
                     right: 15%;
-                    top: 8%;
+                    top: 7%;
                     overflow: hidden;
                 }
 
@@ -219,6 +207,6 @@ export default function Header() {
                         width: 40%;
                 }
             `}</style>
-        </div>
-    )
+    </div>
+  );
 }
