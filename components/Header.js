@@ -73,10 +73,6 @@ export default function Header() {
                     flex-direction: row;
                     justify-content: space-between;
                     margin: 1% auto;
-                    position: absolute;
-                    right: 15%;
-                    top: 7%;
-                    overflow: hidden;
                 }
 
                 .column-container-alt {
@@ -85,10 +81,6 @@ export default function Header() {
                     flex-direction: row;
                     justify-content: space-between;
                     margin: 1% auto;
-                    position: absolute;
-                    right: 35%;
-                    top: 8%;
-                    overflow: hidden;
                 }
         
                 .column {
@@ -171,7 +163,6 @@ export default function Header() {
                 @media (max-width: 1250px) {
                     .column-container {
                         width: 80%;
-                        right: 10%;
                     }
                 }
                 @media (max-width: 700px) {
@@ -180,15 +171,9 @@ export default function Header() {
                     }
                     .column-container {
                         width: 100%;
-                        top: 8%;
-                        left: 0;
-                        right: 0;
                     }
                     .column-container-alt {
                         width: 80%;
-                        top: 8%;
-                        left: 0;
-                        right: 0;
                     }
                     .btn {
                         padding: 0.3em 0.8em;
@@ -200,8 +185,6 @@ export default function Header() {
                 @media (max-height: 900px) and (max-width: 1500px) {
                     .column-container {
                         width: 60%;
-                        left: 0;
-                        right: 0;
                     }
                     .column-container-alt {
                         width: 40%;
