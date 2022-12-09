@@ -1,69 +1,73 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay'
-import gameOfLife from "../images/gameOfLife.jpg"
-import fbExplorer from "../images/fbexplorer.jpg"
-import Reclaim from "../images/reclaimWide.png"
-import KnowledgeBot from "../images/bitcoinKnowledgeBot.png"
-import Sats4tips from "../images/sats4tips.png"
+import React, { useState, useEffect, useCallback } from "react";
+import Head from "next/head";
+import Layout from "../components/Layout";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import gameOfLife from "../images/gameOfLife.jpg";
+import fbExplorer from "../images/fbexplorer.jpg";
+import Reclaim from "../images/reclaimWide.png";
+import KnowledgeBot from "../images/bitcoinKnowledgeBot.png";
+import Sats4tips from "../images/sats4tips.png";
 
 const projects = [
   {
-      src: KnowledgeBot.src,
-      altText: 'Bitcoin Knowledge Bot',
-      header: "Bitcoin Knowledge Bot",
-      github: "https://github.com/bitcoin-knowledge/bitcoin-knowledge-bot",
-      caption: "A question & answer AI bot that also suggests articles/podcasts. Powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge",
-      link: "https://bitcoin-knowledge-bot-frontend.vercel.app"
+    src: KnowledgeBot.src,
+    altText: "Bitcoin Knowledge Bot",
+    header: "Bitcoin Knowledge Bot",
+    github: "https://github.com/bitcoin-knowledge/bitcoin-knowledge-bot",
+    caption:
+      "A question & answer AI bot that also suggests articles/podcasts. Powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge",
+    link: "https://bitcoin-knowledge-bot-frontend.vercel.app",
   },
   {
     src: Sats4tips.src,
-    altText: 'Sats4Tips',
+    altText: "Sats4Tips",
     header: "Sats4Tips",
     github: "https://github.com/cmdruid/lightning-tip-jar",
     caption: "Your own personalized space for collecting tips in Bitcoin.",
-    link: "https://sats4.tips"
+    link: "https://sats4.tips",
   },
   {
-      src: Reclaim.src,
-      altText: "Reclaim app image",
-      header: "Reclaim",
-      github: 'https://github.com/ReclaimApp/Reclaim',
-      caption: "Reclaim is an open source desktop app for collecting and storing your online information. With Reclaim you can collect your social media data in a few clicks and explore every photo, friend, and interaction from your digital life.",
-      link: "https://github.com/ReclaimApp/Reclaim"
+    src: Reclaim.src,
+    altText: "Reclaim app image",
+    header: "Reclaim",
+    github: "https://github.com/ReclaimApp/Reclaim",
+    caption:
+      "Reclaim is an open source desktop app for collecting and storing your online information. With Reclaim you can collect your social media data in a few clicks and explore every photo, friend, and interaction from your digital life.",
+    link: "https://github.com/ReclaimApp/Reclaim",
   },
   {
-      src: fbExplorer.src,
-      altText: "fb-explorer app image",
-      header: "fbexplorer",
-      github: 'https://github.com/AustinKelsay/fb-explorer',
-      caption: "fbexplorer is a tool that lets you reclaim, search, and explore all of your Facebook data. This is a single page application built with React and utilizing Redux/hooks for state management. fbexplorer does not collect any user's Facebook data or personal information.",
-      link: 'https://fbexplorer.app/'
+    src: fbExplorer.src,
+    altText: "fb-explorer app image",
+    header: "fbexplorer",
+    github: "https://github.com/AustinKelsay/fb-explorer",
+    caption:
+      "fbexplorer is a tool that lets you reclaim, search, and explore all of your Facebook data. This is a single page application built with React and utilizing Redux/hooks for state management. fbexplorer does not collect any user's Facebook data or personal information.",
+    link: "https://fbexplorer.app/",
   },
   {
-      src: gameOfLife.src,
-      altText: "austin's game of life app image",
-      header: "Austin's game of life",
-      github: 'https://github.com/AustinKelsay/austins-game-of-life',
-      caption: 'An implementation of Conway’s Game of Life. This is a React single page application with a random cell placement feature, speed settings for the simulation, and the ability to step through each generation with a visual counter! I have always been fascinated by celular automata and conways game of life in paticular!',
-      link: 'https://austins-game-of-life.vercel.app/'
-    }
-]
+    src: gameOfLife.src,
+    altText: "austin's game of life app image",
+    header: "Austin's game of life",
+    github: "https://github.com/AustinKelsay/austins-game-of-life",
+    caption:
+      "An implementation of Conway’s Game of Life. This is a React single page application with a random cell placement feature, speed settings for the simulation, and the ability to step through each generation with a visual counter! I have always been fascinated by celular automata and conways game of life in paticular!",
+    link: "https://austins-game-of-life.vercel.app/",
+  },
+];
 
 export default function Home() {
-  const options = { delay: 3000 } // Options
-  const autoplayRoot = (emblaRoot) => emblaRoot.parentElement // Root node
-  const autoplay = Autoplay(options, autoplayRoot)
-  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [autoplay])
-  const [windowWidth, setWindowWidth] = useState(null)
+  const options = { delay: 3000 }; // Options
+  const autoplayRoot = (emblaRoot) => emblaRoot.parentElement; // Root node
+  const autoplay = Autoplay(options, autoplayRoot);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setWindowWidth(window.innerWidth)
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
     }
-  }, [])
+  }, []);
 
   return (
     <div className={windowWidth > 460 ? "container" : "mobile-container"}>
@@ -74,21 +78,27 @@ export default function Home() {
       <main>
         <Layout>
           <div className="embla" ref={emblaRef}>
-              <div className='embla__container'>
-                  {projects.map((project, index) => {
-                    return(
-                      <div key={index} className='embla-project-container'>
-                          <img onClick={() => window.open(project.link, "_blank")} src={project.src} className="embla__slide"/>
-                          <h4 className="project-title">{project.header}</h4>
-                      </div>
-                      )
-                    })
-                  }
-              </div>
-                <div className='text-container'>
-                    <p className='welcome-text'>Hello world!</p>
-                    <p className='welcome-text'>I'm Austin, a Bitcoin plebdev, this is my project portfolio and blog.</p>
-                </div>
+            <div className="embla__container">
+              {projects.map((project, index) => {
+                return (
+                  <div key={index} className="embla-project-container">
+                    <img
+                      onClick={() => window.open(project.link, "_blank")}
+                      src={project.src}
+                      className="embla__slide"
+                    />
+                    <h4 className="project-title">{project.header}</h4>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="text-container">
+              <p className="welcome-text">Hello world!</p>
+              <p className="welcome-text">
+                I'm Austin, a Bitcoin plebdev, this is my project portfolio and
+                blog.
+              </p>
+            </div>
           </div>
         </Layout>
       </main>
@@ -114,11 +124,11 @@ export default function Home() {
           align-items: center;
         }
         main {
-            flex: 1 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-          }
+          flex: 1 0 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
         span {
           text-align: center;
         }
@@ -138,26 +148,24 @@ export default function Home() {
         }
 
         .embla__container {
-            display: flex;
-            border-radius: 10px;
+          display: flex;
+          border-radius: 10px;
         }
 
         .embla-project-container {
-            margin: 0 auto;
-            position: relative;
-            flex: 0 0 100%;
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            border-radius: 25px;
+          margin: 0 auto;
+          position: relative;
+          flex: 0 0 100%;
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+          border-radius: 25px;
         }
 
         .embla__slide:hover {
-          box-shadow:
-          0 0 5px 3px #FF9900,
-          0 0 5px 3px #fff;
-            transition: box-shadow 0.5s;
-            cursor: pointer;
+          box-shadow: 0 0 5px 3px #ff9900, 0 0 5px 3px #fff;
+          transition: box-shadow 0.5s;
+          cursor: pointer;
         }
 
         .project-title {
@@ -186,180 +194,180 @@ export default function Home() {
         }
 
         .embla__slide {
-            width: 45%;
-            margin: 1% auto;
-            height: auto;
-            border-radius: 10px;
+          width: 45%;
+          margin: 1% auto;
+          height: auto;
+          border-radius: 10px;
         }
 
         .embra-button-container {
-            width: 60%;
-            margin: 0 auto;
-            margin-top: 2%;
-            display: flex;
-            justify-content: space-around;
+          width: 60%;
+          margin: 0 auto;
+          margin-top: 2%;
+          display: flex;
+          justify-content: space-around;
         }
 
-      .embla__prev,
-      .embla__next {
+        .embla__prev,
+        .embla__next {
           margin: 1% auto;
           background: none;
           border: none;
           cursor: pointer;
           line-height: 1.5;
-          font: 700 1.2rem 'Open Sans', sans-serif;
+          font: 700 1.2rem "Open Sans", sans-serif;
           padding: 0.5em 1.5em;
           letter-spacing: 0.05rem;
           border: 2px solid black;
-      }
-
-      .embla__prev:focus,
-      .embla__next:focus {
-          box-shadow: inset 0 0 0 4px #E0FFFF;
-          border: 1px solid #2F4F4F
         }
 
-      .embla__prev:hover,
-      .embla__next:hover {
+        .embla__prev:focus,
+        .embla__next:focus {
+          box-shadow: inset 0 0 0 4px #e0ffff;
+          border: 1px solid #2f4f4f;
+        }
+
+        .embla__prev:hover,
+        .embla__next:hover {
           border: 2px solid #ccc;
-      }
-      @media (max-width: 1450px) {
-        .embla-project-container {
+        }
+        @media (max-width: 1450px) {
+          .embla-project-container {
             width: 100%;
-        }
-        .embla__slide {
+          }
+          .embla__slide {
             width: 70%;
-        }
-        .project-title {
+          }
+          .project-title {
             width: 80%;
             margin-top: 1%;
             font-size: 1.6rem;
-        }
-        .text-container {
+          }
+          .text-container {
             width: 70%;
-        }
-        .welcome-text {
+          }
+          .welcome-text {
             width: 80%;
             margin-top: 2%;
             font-size: 1.3rem;
+          }
         }
-      }
-      @media (max-width: 1350px) {
-        .embla-project-container {
+        @media (max-width: 1350px) {
+          .embla-project-container {
             width: 100%;
-        }
-        .embla__slide {
+          }
+          .embla__slide {
             width: 70%;
-        }
-        .project-title {
+          }
+          .project-title {
             width: 80%;
             margin-top: 1%;
             font-size: 1.6rem;
-        }
-        .welcome-text {
+          }
+          .welcome-text {
             width: 80%;
             margin-top: 2%;
             font-size: 1.3rem;
+          }
         }
-      }
-      @media (max-width: 1200px) {
-        .embla-project-container {
+        @media (max-width: 1200px) {
+          .embla-project-container {
             width: 100%;
-        }
-        .embla__slide {
+          }
+          .embla__slide {
             width: 80%;
-        }
-        .project-title {
+          }
+          .project-title {
             width: 100%;
             margin-top: 1%;
             font-size: 1.6rem;
-        }
-        .welcome-text {
+          }
+          .welcome-text {
             width: 100%;
             margin-top: 2%;
             font-size: 1.3rem;
+          }
         }
-      }
-      @media (max-width: 1024px) {
-        .embla-project-container {
+        @media (max-width: 1024px) {
+          .embla-project-container {
             width: 100%;
-        }
-        .embla__slide {
+          }
+          .embla__slide {
             width: 90%;
-        }
-        .project-title {
+          }
+          .project-title {
             width: 100%;
             margin-top: 1%;
             font-size: 1.3rem;
-        }
-        .text-container {
+          }
+          .text-container {
             width: 80%;
             margin-top: 5%;
-        }
-        .welcome-text {
+          }
+          .welcome-text {
             width: 100%;
             margin-top: 3%;
             font-size: 1.2rem;
+          }
         }
-      }
-      @media (max-height: 900px) and (max-width: 1500px) {
+        @media (max-height: 900px) and (max-width: 1500px) {
           .embla-project-container {
-              width: 100%;
+            width: 100%;
           }
           .embla__slide {
-              width: 35%;
-              margin-top: 3%;
+            width: 35%;
+            margin-top: 3%;
           }
           .project-title {
-              margin-top: 1%;
+            margin-top: 1%;
           }
           .text-container {
             font-size: 1rem;
             margin: 0.5% auto;
           }
-      }
+        }
         @media (max-width: 650px) {
-            .embla-project-container {
-                width: 100%;
-            }
-            .embla__slide {
-                width: 90%;
-            }
-            .project-title {
-                width: 100%;
-                margin-top: 5%;
-                font-size: 1.3rem;
-            }
-            .text-container {
-                width: 90%;
-                margin-top: 5%;
-            }
-            .welcome-text {
-                width: 100%;
-                margin-top: 5%;
-                font-size: 1.2rem;
-            }
+          .embla-project-container {
+            width: 100%;
+          }
+          .embla__slide {
+            width: 90%;
+          }
+          .project-title {
+            width: 100%;
+            margin-top: 5%;
+            font-size: 1.3rem;
+          }
+          .text-container {
+            width: 90%;
+            margin-top: 5%;
+          }
+          .welcome-text {
+            width: 100%;
+            margin-top: 5%;
+            font-size: 1.2rem;
+          }
         }
         @media (max-width: 600px) {
-            .embla-project-container {
-                width: 100%;
-            }
-            .embla__slide {
-                width: 80%;
-            }
-            .project-title {
-                width: 100%;
-                margin-top: 5%;
-                font-size: 1.3rem;
-            }
-            .text-container {
-                width: 90%;
-                margin-top: 5%;
-            }
-            .welcome-text {
-                width: 80%;
-                font-size: 1.2rem;
-            }
+          .embla-project-container {
+            width: 100%;
+          }
+          .embla__slide {
+            width: 80%;
+          }
+          .project-title {
+            width: 100%;
+            margin-top: 5%;
+            font-size: 1.3rem;
+          }
+          .text-container {
+            width: 90%;
+            margin-top: 5%;
+          }
+          .welcome-text {
+            width: 80%;
+            font-size: 1.2rem;
+          }
         }
       `}</style>
       <style jsx global>{`
@@ -370,13 +378,19 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
-            transition: all ease-in 20s;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background: linear-gradient(-30deg, #df590bcc, #c43232c5, #2aafe0c7, #473b88c5);
-            background-size: 400% 400%;
-            animation: gradient 60s ease infinite;
+          transition: all ease-in 20s;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background: linear-gradient(
+            -30deg,
+            #df590bcc,
+            #c43232c5,
+            #2aafe0c7,
+            #473b88c5
+          );
+          background-size: cover;
+          animation: gradient 60s ease infinite;
         }
         @keyframes gradient {
           0% {
@@ -395,5 +409,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
