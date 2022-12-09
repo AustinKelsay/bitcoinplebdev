@@ -378,30 +378,6 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
-          transition: all ease-in 20s;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background: linear-gradient(
-            -30deg,
-            #df590bcc,
-            #c43232c5,
-            #2aafe0c7,
-            #473b88c5
-          );
-          background-size: cover;
-          animation: gradient 60s ease infinite;
-        }
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
         }
 
         * {
