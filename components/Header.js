@@ -163,6 +163,7 @@ export default function Header() {
                 @media (max-width: 1250px) {
                     .column-container {
                         width: 80%;
+                        margin: 0 auto;
                     }
                 }
                 @media (max-width: 700px) {
@@ -171,9 +172,11 @@ export default function Header() {
                     }
                     .column-container {
                         width: 100%;
+                        margin: 0 auto;
                     }
                     .column-container-alt {
                         width: 80%;
+                        margin: 0 auto;
                     }
                     .btn {
                         padding: 0.3em 0.8em;
@@ -185,9 +188,11 @@ export default function Header() {
                 @media (max-height: 900px) and (max-width: 1500px) {
                     .column-container {
                         width: 60%;
+                        margin: 0 auto;
                     }
                     .column-container-alt {
                         width: 40%;
+                        margin: 0 auto;
                 }
             `}</style>
     </div>
