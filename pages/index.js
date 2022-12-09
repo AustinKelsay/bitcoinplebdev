@@ -70,7 +70,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={windowWidth > 460 ? "container" : "mobile-container"}>
+    <div>
       <Head>
         <title>bitcoinplebdev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -104,26 +104,8 @@ export default function Home() {
       </main>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          height: 100vh;
-          height: -webkit-fill-available;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .mobile-container {
-          height: 100vh;
-          height: -webkit-fill-available;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
         main {
+          height: 100vh;
           flex: 1 0 auto;
           display: flex;
           flex-direction: column;
@@ -378,6 +360,30 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+          transition: all ease-in 20s;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background: linear-gradient(
+            -30deg,
+            #df590bcc,
+            #c43232c5,
+            #2aafe0c7,
+            #473b88c5
+          );
+          background-size: 400% 400%;
+          animation: gradient 60s ease infinite;
+        }
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
 
         * {
