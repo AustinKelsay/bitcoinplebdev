@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev && node nip5.js",
-    "build": "npx concurrently --kill-others-on-fail 'next dev' 'node nip5.js'",
+    "build": "npx concurrently --kill-others-on-fail 'next build' 'node nip5.js'",
     "start": "next start"
   },
   "dependencies": {
