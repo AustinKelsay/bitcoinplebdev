@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "node nip5.js && next dev",
-    "build": "next build && node nip5.js",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
