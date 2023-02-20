@@ -20,7 +20,7 @@ export default function About() {
 
       <main>
         <Layout>
-          <InfiniteScroll dataLength={3} height={"65vh"}>
+          <InfiniteScroll dataLength={3} height={"60vh"}>
             <div className="text-container">
               <div className="text-block">
                 <h3>ABOUT</h3>
