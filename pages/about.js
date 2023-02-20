@@ -291,7 +291,7 @@ export default function About() {
           justify-content: space-evenly;
           border: 2px solid black;
           border-radius: 10px;
-          background-color: rgb(255, 255, 255, 0.5);
+          background-color: rgba(247, 149, 29, 0.85);
         }
         .skill-column {
           display: flex;
@@ -300,8 +300,6 @@ export default function About() {
           min-height: 100%;
           justify-content: space-around;
           align-items: center;
-          background-color: rgba(247, 149, 29, 0.85);
-          border-radius: 10px;
           padding-bottom: 1%;
         }
         .skill-column span {

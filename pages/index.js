@@ -8,8 +8,30 @@ import fbExplorer from "../images/fbexplorer.jpg";
 import Reclaim from "../images/reclaimWide.png";
 import KnowledgeBot from "../images/bitcoinKnowledgeBot.png";
 import Sats4tips from "../images/sats4tips.png";
+import PlebDevCourse from "../images/plebdev-course.png";
+import PlebDevs from "../images/plebdevs.png";
 
 const projects = [
+  // {
+  //   src: PlebDevs.src,
+  //   altText: "PlebDevs",
+  //   header: "PlebDevs Community",
+  //   github: "https://github.com/pleb-devs",
+  //   caption:
+  //     "A scrappy group of developers focused on Bitcoin/Lightning app development. Let's level up together!",
+  //   role: "Founder / Organizer",
+  //   link: "https://discord.gg/FWkaBXmr",
+  // },
+  // {
+  //   src: PlebDevCourse.src,
+  //   altText: "PlebDevs course 1",
+  //   header: "PlebDevs course 1",
+  //   github: "https://github.com/pleb-devs/plebdev-course-1",
+  //   caption:
+  //     "Introducing the PlebDev course. One-stop course to build your first lightning app! We'll take you from a beginner to a capable front-end developer focusing on Bitcoin/Lightning projects.",
+  //   role: "Instructor / Creator",
+  //   link: "https://www.udemy.com/course/pleblabaustin/",
+  // },
   {
     src: KnowledgeBot.src,
     altText: "Bitcoin Knowledge Bot",
