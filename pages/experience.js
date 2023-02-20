@@ -13,8 +13,19 @@ import KnowledgeBot from "../images/bitcoinKnowledgeBot.png";
 import Alby from "../images/alby.png";
 import Sats4tips from "../images/sats4tips.png";
 import PlebDevCourse from "../images/plebdev-course.png";
+import PlebDevs from "../images/plebdevs.png";
 
 const projects = [
+  {
+    src: PlebDevs.src,
+    altText: "PlebDevs",
+    header: "PlebDevs Community",
+    github: "https://github.com/pleb-devs",
+    caption:
+      "A scrappy group of developers focused on Bitcoin/Lightning app development. Let's level up together!",
+    role: "Founder / Organizer",
+    link: "https://discord.gg/FWkaBXmr",
+  },
   {
     src: PlebDevCourse.src,
     altText: "PlebDevs course 1",
@@ -110,11 +121,15 @@ export default function Experience() {
                       maxWidth: 450,
                       maxHeight: 550,
                       backgroundColor: "rgb(255, 255, 255, 0.8);",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
                     }}
                   >
                     <CardMedia
                       component="img"
-                      width="150"
+                      width="auto"
+                      height="auto"
                       image={project.src}
                     />
                     <CardContent>
